@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<title>spookycouch | Gallery</title>
+		<link href="./assets/spookycouch.png" rel="shortcut icon" type="image/png">
+		<link href="./css/navbar.css" type="text/css" rel="stylesheet">
+		<link href="./css/gridStyleGal.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- modal image; occupies full screen when grid items are clicked on. consists of media and buttons -->
+		<div id="modal">
+			<span id="imageCounter"></span>
+			<span id="prevImgBtn" class="modalButton"> &#9668; </span>
+			<div id="closeModal"></div>
+			<span id="exitButton" class="modalButton">&times;</span>
+			<div id="modalItems">
+					<img id="modalImage" src="./images/gallery/lighthouse.jpg">
+					<video id="modalVideo" controls></video>
+					<audio id="modalAudio" controls></audio>
+					<div id="modalText">
+						<h4>Hello</h4>
+						<span>Hello</span>
+					</div>
+			</div>
+			<span id="nextImgBtn" class="modalButton"> &#9658; </span>
+		</div>
+
+		<!-- NAVIGATION BAR -->
+		<nav>
+			<div class="navForeground">
+				<!-- logo -->
+				<h1>	<a href="./index.html">spookycouch <img class="couchLogo specialCouch" src="./assets/spookycouch.png" height="24px" width="24px"></a>	</h1>
+				<!-- hamburger/drop-down menu buttons -->
+				<ul class="menuItem">
+					<li id="tocButton">Filters <span id="arrow">&#9660;</span>	</li>	
+					<li id="hamburger">	&#9776;</li>
+				</ul>
+				<!-- page navigation -->
+				<ul id="navButtons" class="menuItem">
+					<li class="hamburger2">	<span id="hamburger2">&#9776;</span></li>
+					<li>	<a href="./index.html">Home</a>	</li>
+					<li>	<a href="./about.html">About</a>	</li>	
+					<li class="select">	<a href="./gallery.html">Gallery</a> </li>
+					<li>	<a href="./tutorial.html">Tutorials	</a>	</li>
+					<li>	<a href="./contact.html">Contact</a> </li>
+				</ul>
+				<!-- hamburger menu dark screen -->
+				<div id="screen"></div>
+			</div>
+
+			<!-- Drop-down menu for filters -->
+			<div id="dropToc" style="top:-150px;">
+				<!-- OVERRIDE as inputs are used instead of anchors for this page only -->
+				<style>
+					#dropToc li {
+						padding:10px 40px;
+						border-bottom: 1px solid #26867c;
+					}
+				</style>
+				<!-- OVERRIDE -->
+				<ul>
+					<li>	<input type="checkbox" class="filterCheck">Game Design [<span class="catCount"></span>]</input>	</li>
+					<li>	<input type="checkbox" class="filterCheck">Animation [<span class="catCount"></span>]</input>	</li>
+					<li>	<input type="checkbox" class="filterCheck">Art [<span class="catCount"></span>]</input>	</li>
+					<li>	<input type="checkbox" class="filterCheck">Music [<span class="catCount"></span>]</input>	</li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<!-- main content -->
+		<main>
+
+			<div class="banner">
+				<h2>Portfolio</h2>
+				<span>A gallery of my works from 2014 to present.</span>
+				<span>Click on any image to expand</span>
+			</div>
+
+			<div class="grid">
+			<!-- GRID - additions to the grid must be in the form of a "gridItem" with a second class representing the category of the content
+				gridItems will contain an imageContainer - with an img, video or audio - and a textContainer with a subtitle -->
+
+
+				<div class="gridItem gameDesign">
+					<div class="imageContainer"><img src="./images/gallery/bedroom.png"></div>
+					<div class="textContainer">
+						<h3>Bedroom</h3>
+						<span>Art for scene 1 of a gamemaker project about work, 2017</span>
+					</div>
+				</div>
+
+
+				<div class="gridItem animation">
+					<div class="imageContainer"><video class="loop" src="./assets/blueJagstang.mp4" controls>Video not supported</video></div>
+					<div class="textContainer">
+						<h3>Blue Jagstang</h3>
+						<span>Character Design inspired by the song of the same name, 2016</span>
+					</div>
+				</div>
+
+
+				<div class="gridItem art">
+					<div class="imageContainer"><img src="./images/gallery/child.png"></div>
+					<div class="textContainer">
+						<h3>Child</h3>
+						<span>Drawing inspired by childhood, 2017</span>
+					</div>
+				</div>
+
+
+				<div class="gridItem art">
+					<div class="imageContainer"><img src="./images/gallery/lighthouse.jpg"></div>
+					<div class="textContainer">
+						<h3>Lighthouse</h3>
+						<span>Illustration of a bird house, 2016</span>
+					</div>
+				</div>
+
+
+				<div class="gridItem art">
+					<div class="imageContainer"><img src="./images/gallery/ggrass2.png"></div>
+					<div class="textContainer">
+						<h3>Green Grass</h3>
+						<span>Still from a cartoon about inequality, 2016</span>
+					</div>
+				</div>
+
+				<div class="gridItem gameDesign">
+					<div class="imageContainer"><img src="./images/gallery/game.png"></div>
+					<div class="textContainer">
+						<h3>Java Shooter</h3>
+						<span>Screenshot of a game I made in Java during foundation, 2018</span>
+					</div>
+				</div>
+
+
+				<div class="gridItem music">
+					<div class="imageContainer"><audio src="./assets/broadcast.wav" type="audio/wav" controls>Audio not supported</audio></div>
+					<div class="textContainer">
+						<h3>Broadcast.wav</h3>
+						<span>Michael A Grammar by Broadcast made on SonicPi, 2018</span>
+					</div>
+				</div>
+
+
+				<div class="gridItem animation">
+					<div class="imageContainer"><video src="./assets/yowasapsteve.mp4" controls>Video not supported</video></div>
+					<div class="textContainer">
+						<h3>Steve</h3>
+						<span>Animation about the intended name for a future cat, 2015</span>
+					</div>
+				</div>
+
+
+				<div class="gridItem art">
+					<div class="imageContainer"><img src="./images/gallery/soul.jpg"></div>
+					<div class="textContainer">
+						<h3>Kevin's Soul</h3>
+						<span>Background for a cartoon about inner being, 2014</span>
+					</div>
+				</div>
+
+
+			</div>
+			
+		</main>
+		
+		<footer>
+			<div class="left"><a href="https://www.bellerbys.com/find-your-course/foundation/foundation-computing" target="_blank">Bellerbys Computing Foundation</a></div>
+			<div class="middle"><span>Created by Joe Jeffcock 2018</span></div>
+			<div class="right"><span>Social Media: </span></div>
+			<div class="socialMedia">
+				<ul>
+					<li><a href="https://www.facebook.com/bellerbyscollege/" target="_blank"><img src="./assets/facebook.png" alt="facebook"></a></li>
+					<li><a href="https://www.instagram.com/bellerbys_college" target="_blank"><img src="./assets/instagram.png" alt="instagram"></a></li>
+					<li><a href="https://twitter.com/bellerbys" target="_blank"><img src="./assets/twitter.png" alt="twitter"></a></li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- javascript -->
+		<script src="./js/navbarDrop.js" type="text/javascript"></script>
+		<script src="./js/modalGallery.js" type="text/javascript"></script>
+	</body>
+</html>

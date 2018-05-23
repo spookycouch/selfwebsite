@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<title>spookycouch</title>
+		<link href="./assets/spookycouch.png" rel="shortcut icon" type="image/png">
+		<link href="./css/navbar.css" type="text/css" rel="stylesheet">
+		<link href="./css/carousel.css" type="text/css" rel="stylesheet">
+		<link href="./css/gridStyle.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="modal"></div>
+
+		<!-- NAVIGATION BAR -->
+		<nav>
+			<div class="navForeground">
+				<!-- logo -->
+				<h1>	<a href="./index.html">spookycouch <img class="couchLogo" src="./assets/spookycouch.png" height="24px" width="24px"></a>	</h1>
+				<!-- hamburger menu button -->
+				<ul class="menuItem">
+					<li id="hamburger">	&#9776;</li>
+				</ul>
+				<!-- page navigation -->
+				<ul id="navButtons" class="menuItem">
+					<li class="hamburger2">	<span id="hamburger2">&#9776;</span></li>
+					<li class="select">	<a href="./index.html">Home</a>	</li>
+					<li>	<a href="./about.html">About</a>	</li>	
+					<li>	<a href="./gallery.html">Gallery</a> </li>
+					<li>	<a href="./tutorial.html">Tutorials	</a>	</li>
+					<li>	<a href="./contact.html">Contact</a> </li>
+				</ul>
+				<!-- hamburger menu dark screen -->
+				<div id="screen"></div>
+			</div>
+		</nav>
+		<!-- NAVIGATION BAR -->
+
+
+
+		<main>
+			<!-- CAROUSEL. new carousel items are divs of class "carouselItem", containing a div "itemImage" with a h2, and an img wrapped in a link -->
+			<div class = "carousel">
+				<span id="slideCounter">1/3</span>
+				<div id="carouselSlides">
+
+					<div class="carouselItem" style="left: 0;">
+						<div class="itemImage">
+							<h2>Portfolio</h2>
+							<span>view my previous works</span>
+							<br>
+							<a href="./gallery.html"><img src="./images/index/ggrass2.png"></a>
+						</div>				
+					</div>
+
+					<div class="carouselItem" style="left: 100%;">
+						<div class="itemImage">
+							<h2>Java Tutorial</h2>
+							<span>learn game design in java</span>
+							<br>
+							<a href="./tutorial.html"><img src="./images/index/coding.png"></a>
+						</div>
+					</div>
+
+					<div class="carouselItem" style="left: 200%;">
+						<div class="itemImage">
+							<h2>Dev Blog</h2>
+							<span>behind the scenes @spookycouch</span>
+							<br>
+							<a href="./about.html"><img src="./images/index/dev.jpg"></a>
+						</div>				
+					</div>
+
+					<div class="carouselItem" style="left: 300%;">
+						<div class="itemImage">
+							<h2>Portfolio</h2>
+							<span>view my previous works</span>
+							<br>
+							<a href="./gallery.html"><img src="./images/index/ggrass2.png"></a>
+						</div>	
+
+					</div>
+				</div>
+				
+				<!-- carousel buttons to go to slides -->
+				<ul class="carouselButtons">
+					<li id="cButton1">&#9679;</li>
+					<li id="cButton2">&#9679;</li>
+					<li id="cButton3">&#9679;</li>
+				</ul>
+
+			</div>
+
+			<div class="banner">
+				<img src="./assets/banner.png">
+				<p>A collection of my work in digital and interactive media</p>
+			</div>
+
+			<!-- GRID. New grid items to follow the format below; div of class "gridItem" containing a link, an "imageContainer" and a "textContainer" 
+				imageContainer consists of an img, while textContainer contains a h3 title and a span for descriptions-->
+			<div class="grid">
+
+				<div class="gridItem">
+					<a href="./gallery.html"></a>
+					<div class="imageContainer">
+						<img src="./images/index/child.png">
+					</div>
+					<div class="textContainer">
+						<h3>Gallery</h3>
+						<span>A portfolio of my work from 2014 to present</span>
+					</div>
+				</div>
+
+				<div class="gridItem">
+					<a href="./about.html"></a>
+					<div class="imageContainer" style="background-image: url(./images/index/self.jpg);">
+						<img src="./images/index/self.jpg">
+					</div>
+					<div class="textContainer">
+						<h3>About</h3>
+						<span>An insight on the creative process behind this web page</span>
+					</div>
+				</div>
+
+				<div class="gridItem">
+					<a href="./tutorial.html"></a>
+					<div class="imageContainer">
+						<img src="./images/index/tutorialLink.png">
+					</div>
+					<div class="textContainer">
+						<h3>Tutorial</h3>
+						<span>Learn basic game design and Graphical User Interfaces in Java</span>
+					</div>
+				</div>
+
+				<div class="gridItem">
+					<a href="https://www.etsy.com" target="_blank"></a>
+					<div class="imageContainer">
+						<img src="./images/index/merch.jpg">
+					</div>
+					<div class="textContainer">
+						<h3>Store</h3>
+						<span>Visit our store at [expunged for legal reasons] and rock the couch logo</span>
+					</div>
+				</div>
+
+				<div class="gridItem">
+					<a href="./contact.html"></a>
+					<div class="imageContainer">
+						<img src="./images/index/space.png">
+					</div>
+					<div class="textContainer">
+						<h3>Contact</h3>
+						<span>Find us on Earth or join our mailing list for future updates</span>
+					</div>
+				</div>
+
+			</div>
+
+		</main>
+
+		<footer>
+			<div class="left"><a href="https://www.bellerbys.com/find-your-course/foundation/foundation-computing" target="_blank">Bellerbys Computing Foundation</a></div>
+			<div class="middle"><span>Created by Joe Jeffcock 2018</span></div>
+			<div class="right"><span>Social Media: </span></div>
+			<div class="socialMedia">
+				<ul>
+					<li><a href="https://www.facebook.com/bellerbyscollege/" target="_blank"><img src="./assets/facebook.png" alt="facebook"></a></li>
+					<li><a href="https://www.instagram.com/bellerbys_college" target="_blank"><img src="./assets/instagram.png" alt="instagram"></a></li>
+					<li><a href="https://twitter.com/bellerbys" target="_blank"><img src="./assets/twitter.png" alt="twitter"></a></li>
+				</ul>
+			</div>
+		</footer>
+		
+		<!-- javascript -->
+		<script src="./js/navbar.js" type="text/javascript"></script>
+		<script src="./js/carousel.js" type="text/javascript"></script>
+	</body>
+</html>

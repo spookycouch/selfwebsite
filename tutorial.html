@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+		<title>spookycouch | Tutorials</title>
+		<link href="./assets/spookycouch.png" rel="shortcut icon" type="image/png">
+		<link href="./css/blogStyle.css" type="text/css" rel="stylesheet">
+		<link href="./css/code.css" type="text/css" rel="stylesheet">
+		<link href="./css/navbar.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+
+		<!-- NAVIGATION BAR -->
+		<nav>
+			
+			<div class="navForeground">
+				<!-- logo -->
+				<h1>	<a href="./index.html">spookycouch <img class="couchLogo specialCouch" src="./assets/spookycouch.png" height="24px" width="24px"></a>	</h1>
+				<!-- hamburger/drop-down menu buttons -->
+				<ul class="menuItem">
+					<li id="tocButton">Contents <span id="arrow">&#9660;</span>	</li>	
+					<li id="hamburger">	&#9776;</li>
+				</ul>
+				<!-- page navigation -->
+				<ul id="navButtons" class="menuItem">
+					<li class="hamburger2">	<span id="hamburger2">&#9776;</span></li>
+					<li>	<a href="./index.html">Home</a>	</li>
+					<li>	<a href="./about.html">About</a>	</li>	
+					<li>	<a href="./gallery.html">Gallery</a> </li>
+					<li class="select">	<a href="./tutorial.html">Tutorials	</a>	</li>
+					<li>	<a href="./contact.html">Contact</a> </li>
+				</ul>
+				<!-- hamburger menu dark screen -->
+				<div id="screen"></div>
+			</div>
+
+			<!-- Drop-down menu -->
+			<div id="dropToc">
+				<ul>
+					<li>	<a href="#id0">Introduction</a>	</li>	
+					<li>	<a href="#id0.5">0.5. Loading and Saving</a>	</li>
+					<li>	<a href="#id1">1. Creating GUIs</a>	</li>
+					<li>	<a href="#id2">	2. Drawing with GUIs</a>	</li>
+					<li>	<a href="#id3">	3. Animation with GUIs</a>	</li>
+					<li>	<a href="#id4">	4. Input with GUIs</a>	</li>
+					<li> 	<a href="#id5"> 5. Enemies &amp; Hit Detection</a>	</li>
+					<li> 	<a href="#id6"> Epilogue</a>	</li>
+					<li class="buttonli">	<button type="button" class="lights" onclick="triggerLights();">Low-light mode: off</button> </li>
+				</ul>
+			</div>
+		</nav>
+		<!-- NAVIGATION BAR -->
+
+
+
+		<!-- START OF MAIN CONTENT -->
+		<main>
+			<!-- White borders start here -->
+			<div class= "blog #top">
+				
+				<div class="titleCard">
+						<h1>Java Game Dev Tutorial</h1>
+						<span class="snippet">public static void main (String [] args){}</span>
+				</div>
+
+				<h2>Table of Contents:</h2>
+				<div class="post tableOfContents">
+					<ul>
+						<li>	<a href="#id0">Introduction</a>	</li>
+						<li>	<a href="#id0.5">0.5. Loading and Saving</a>	</li>
+						<li>	<a href="#id1">1. Creating GUIs</a>	</li>
+						<li>	<a href="#id2">2. Drawing with GUIs</a>	</li>
+						<li>	<a href="#id3">3. Animation with GUIs</a>	</li>
+						<li>	<a href="#id4">4. Input with GUIs</a>	</li>
+						<li>	<a href="#id5">5. Enemies &amp; Hit Detection</a>	</li>
+						<li>	<a href="#id6">Epilogue</a>	</li>
+					</ul>
+					<button type="button" class="lights" onclick="triggerLights();">Low-light mode: off</button>
+				</div>
+
+				<a class="jump" id="id0">anchor</a>
+				<h2>Introduction: Getting Fancy with Java</h2>
+				<div class="post">				
+					<p>&ensp;Learning to code video games in Java using the interwebs can be intimidating and confusing. Tutorials for the different skills needed
+					   are scattered across the internet, and more often than not they <ins>do not</ins> pertain to the subject in question. 
+					   Using all the skills I've learnt, I made this tutorial to get straight to the point about making java apps using 
+					   GUIs and Action Events. This tutorial assumes the reader has a good knowledge of objects and methods.</p>
+					 <p>&ensp;Examples throughout the tutorial will focus only on making classes. To run them as programs, you can create test instances in IDEs or create a main method at the end of the root class to initialise it. Eg:
+					</p>
+
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							public static void main(String [] args)	<br>
+							{	<br>
+							<span class="comment indent1">//with the example of a GUI from chapters 1-5</span>	<br>
+							&nbsp;&nbsp;GUI testGUI = new GUI();	<br>
+							}
+						</div>
+					</div>
+					<!-- Code example -->  
+
+					<p>&ensp;The first chapter (0.5) will take you through writing and reading text files to save values to be used in game. Following this, chapters 1 through 5 will see
+						us programming a frame to display animations and take inputs to interact with them.
+					</p>
+				</div>
+
+
+
+
+
+
+
+				<a class="jump" id="id0.5">anchor</a>
+				<h2>0.5.Loading and Saving "the Game"</h2>
+				<div class ="post">
+					<p>&ensp;So you've learnt object-oriented programming and computing numbers, and around this time you may be asking yourself: "How can I save these <i>amazing</i> calculations?" looks like you need some <b>java.io</b>!  <br>
+					Here's a rough breakdown of what you'll need from the package:</p>
+					<ul>
+						<li>File</li>
+						<li>FileReader</li>
+						<li>BufferedReader</li>
+						<li>FileWriter</li>
+						<li>BufferedReader</li>
+					</ul>
+					<p>&ensp;Though you could always just do a <span class="snippet">import java.io.*;</span> to get everything you need.
+					</p>
+					<p>&ensp;To write files, you first need to create a text file to which we will write to. The file will then be wrapped in a FileWriter to write to the file, the FileWriter itself being wrapped in a BufferedWriter that will do the work of updating the file for us. Quite a bit of wrapping if I'd say so myself.</p>
+
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							import java.io.*; <br>
+							<br>
+							class Writer	<br>
+							{	<br>
+							<span class="comment indent1">//Declare the objects required</span>	<br>
+							&nbsp;&nbsp;File file; <br>
+							&nbsp;&nbsp;FileWriter fileWriter; <br>
+							&nbsp;&nbsp;BufferedWriter bufferedWriter; <br>
+							<br>
+							<span class="comment indent1">//The write method takes in a string</span>	<br>
+							&nbsp;&nbsp;public void write(String textIn)	<br>
+							&nbsp;&nbsp;{	<br>	
+							<div class="keyword">
+							<span class="comment indent2">//File is initialised as saveData.txt</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;file = new File("saveData.txt");	<br>
+							</div>	<br>
+							<span class="comment indent2">//All writers &amp; readers need to catch IOException, so try-catch is used</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;try	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							<div class="keyword">
+							<span class="comment indent3">//Initisalised fileWriter is wrapped in a bufferedWriter. The bufferedWriter then writes the desired text.</span>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileWriter = new FileWriter(file);<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bufferedWriter = new BufferedWriter(fileWriter); <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bufferedWriter.write(textIn);	<br>
+							</div>	<br>
+							<span class="comment indent3">//Close the file</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bufferedWriter.close(); <br>
+							<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;catch(IOException ioe){}	<br>
+							&nbsp;&nbsp;}	<br>
+							}
+						</div>
+					</div>	<br>
+					<!-- Code example -->
+
+					<p>&ensp;Once this is done, its simply a case of creating an instance of the writer and running the write method with a String of your choice. Here's the result of one I did with the words "hello".</p>
+
+					<div class="center">
+						<img src="./images/tutorial/saveData.png">
+					</div>
+
+					<p>&ensp;The code for a File Reader is very much the same, except it returns a String instead of taking in an argument of one. Let's make a new class of Reader in the same project to see if the writer worked.</p>
+
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							import java.io.*;	<br>
+							<br>
+							class Reader	<br>
+							{	<br>
+							&nbsp;&nbsp;File file; <br>
+							&nbsp;&nbsp;FileReader fileReader; <br>
+							&nbsp;&nbsp;BufferedReader bufferedReader; <br>
+							<div class="keyword">
+							<span class="comment indent1">//String result is declared. This will be returned later</span>	<br>
+							&nbsp;&nbsp;String result;	<br>
+							</div>	<br>
+							<br>
+							&nbsp;&nbsp;public String read()	<br>
+							&nbsp;&nbsp;{	<br>	
+							<span class="comment indent2">//The same file name is used so we can read what was written earlier</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;file = new File("saveData.txt");	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;try	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							<div class="keyword">
+							<span class="comment indent3">//Similar sequence to earlier, except the word write is replaced with read</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fileReader = new FileReader(file);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bufferedReader = new BufferedReader(fileReader); <br>
+							<span class="comment indent3">//Set result to the next line read by the reader</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = bufferedReader.readLine();	<br>
+							</div>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bufferedReader.close(); <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;catch(IOException ioe){}	<br>
+							<div class="keyword">
+							<span class="comment indent2">//Return the result set by the reader</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;return result;	<br>
+							</div>	<br>
+							&nbsp;&nbsp;}	<br>
+							}
+						</div>
+					</div>
+					<!-- Code example -->
+					
+					<p>&ensp;Reading the file you've written earlier, you should get something like this:</p>
+					<div class="center">
+						<img src="./images/tutorial/saveDataRead.png">
+					</div>
+				</div>
+
+				<p>&ensp;With the power file readers and writers, you can now save values such as usernames, level information and even player position! This will all be easily accesible through the text file saved in the program's location, while information could be encrypted to prevent users from tampering with it.</p>
+
+
+
+
+
+
+
+
+				<a class="jump" id="id1">anchor</a>
+				<h2>1.Creating Gooeys (GUIs)</h2>
+				<div class="post">
+					<p>&ensp;We find ourselves at step one of making a game- the screen. It may not seem so, but making the screen was one of the more daunting things about java when I first tried (and failed) to do this a couple of years ago. This was because I had always thought of the screen as a blank slate for pixels to be placed upon, however the swing packages follow a framework that makes it easier for developers to create applications rather than drawings.
+					</p>
+					<p>&ensp;Instead, we have swing, a tool for Java developers to create apps using the language. We'll first make a GUI using swing through <span class="snippet">import javax.swing.JFrame;</span> , then add a button to see how the package works. Here's the code to make a simple blank frame:</p>
+
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							<span class="comment">//Import the object for use in Java</span>	<br>
+							import javax.swing.JFrame;	<br>
+							<br>
+							class GUI<br>
+							{	<br>
+							&nbsp;&nbsp;public GUI()  <br>
+							&nbsp;&nbsp;{	<br>
+							<span class="comment indent2">//creates a frame of size 640x480 and makes it visible</span>	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;&nbsp;&nbsp;JFrame frame = new JFrame(); <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;frame.setSize(640,480);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;frame.setVisible(true);	<br>
+							</div>  <br>
+							&nbsp;&nbsp;}	<br>
+							}	<br>
+						</div>
+					</div>
+					<!-- Code example -->
+	
+					<p>&ensp;Compile the code, create a new instance of GUI and you should get a 640px by 480px screen! Easy enough, now let's add the button.</p>
+					
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							import javax.swing.JFrame;	<br>
+							<span class="comment">//Import the button</span>	<br>
+							<span class="keyword">import javax.swing.JButton;</span>	<br>
+							<br>
+							class GUI<br>
+							{	<br>
+							&nbsp;&nbsp;public GUI()  <br>
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;JFrame frame = new JFrame();	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;frame.setSize(640,480);	<br>
+							<div class="keyword">
+							<span class="comment indent2">//Creates a new button containing the words "hi earth" and adds it to the frame</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;JButton button = new JButton("hi earth");	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;frame.add(button);	<br>
+							</div>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;frame.setVisible(true);	<br>
+							&nbsp;&nbsp;}	<br>
+							}	<br>
+						</div>	<br> 
+					</div>
+					<!-- Code example -->
+
+					<div class="center">
+						<img src="./images/tutorial/button.png">
+					</div>
+
+					<p>&ensp;Now if you'll notice, the button takes up the entirity of the screen. This shows how swing containers work, as swing objects take up the full width of their parents when added without a layout.</p>
+
+				</div>
+
+
+
+
+
+
+				
+				<a class="jump" id="id2">anchor</a>
+				<h2>2.Drawing with said Gooeys</h2>
+				<div class="post">
+					<p>&ensp;So we've made a screen with a button on it. That's <i>kinda</i> cool right? But hey, we really want our own graphics on the screen if we're making a game.
+					To do this, we'll need to <strong>override the paint method</strong> in our Jframe.
+				</p>
+					<p>While we're at it, lets turn our GUI into the JFrame itself by "extending" it.
+					</p>
+					<span class="snippet">public class GUI extends JFrame;</span>
+					<p>Once overridden, we can use the Graphics2D library to draw a myriad of shapes to our heart's content</p>
+
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							import javax.swing.JFrame;	<br>
+							import java.awt.Graphics;	<br>
+							import java.awt.Graphics2D;	<br>
+							<br>
+							<div class="keyword">
+							<span class="comment">//Make the GUI an extension of JFrame</span>	<br>
+							class GUI extends JFrame
+							</div><br>
+							{	<br>
+							&nbsp;&nbsp;public GUI()  <br>
+							&nbsp;&nbsp;{	<br>
+							<div class="keyword">
+							<span class="comment indent2">//Since GUI is a frame, methods are called locally</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setSize(640,480);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setVisible(true);	<br>
+							</div>	<br>
+							&nbsp;&nbsp;}	<br>
+							<div class="keyword">
+							<span class="comment indent1">//Override the paint function</span>	<br>
+							&nbsp;&nbsp;public void paint(Graphics g)  <br>
+							&nbsp;&nbsp;{	<br>
+							<span class="comment indent2">//Cast the graphics as an awt Graphics2D object, using it to draw a square and a line</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Graphics2D g2d = (Graphics2D)g;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.fillRect(200,200,50,50);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.drawLine(50,50,200,400);	<br>
+							&nbsp;&nbsp;}	<br>
+							</div>	<br>
+						}	<br>
+						</div>	<br>
+					</div>
+					<!-- Code example -->
+
+					<p>&ensp;Great! We've drawn a square and a line. Now this magnificent piece of abstract art may not look like much, but it represents something bigger
+					than itself; with enough of these shapes, we have the power to form images more complex than its individual parts. <i><b>Emergence!</b></i></p>
+
+					<div class="center">
+						<canvas id="canvas2" width="640px" height="480px"></canvas>
+					</div>
+				</div>
+
+
+
+
+
+
+
+				<a class="jump" id="id3">anchor</a>
+				<h2>3.The Gooey, it moves!</h2>
+				<div class="post">					
+					<p>&ensp;Now that we're able to draw shapes, we're going to want them to move; the game wouldn't be very interactive otherwise. To achieve this, we can make use of the
+					Timer object included in the javax swing package. The timer comprises of an action listener that calls a method at regular set time intervals, meaning we could
+					simply tell the GUI to repaint its graphics every few dozen milliseconds or so.</p>
+					<div class="center"><span class="snippet">Timer timer = new Timer("few dozen milliseconds", new ActionListener());</span></div>
+					<p>&ensp;At this point you may be asking yourself, what's an ActionListener? The ActionListener is a class in the awt package that "listens" for a certain action to be performed, eg. the timer goes off. When the action is performed, a set of instructions can be carried out by the program in the actionPerformed method within the class.
+					To make it do what we want, we'll need to override the actionPerformed method of the class and set our own instructions.
+					</p>
+
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							import javax.swing.JFrame;	<br>
+							<div class="keyword">
+							import javax.swing.Timer;	<br>
+							import java.awt.event.*;
+							</div>	<br>
+							import java.awt.Graphics;	<br>
+							import java.awt.Graphics2D;	<br>
+							<br>
+							class GUI extends JFrame	<br>
+							{	<br>
+							&nbsp;&nbsp;<span class="keyword">private int squareX;</span>	<br>
+							&nbsp;&nbsp;public GUI()	<br>
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;squareX = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setSize(640,480);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setVisible(true);	<br>
+							<span class="comment indent2">//Creates a timer of interval 0.5 seconds and a listener that calls a method when it goes off</span>	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;&nbsp;&nbsp;Timer timer = new Timer(500,new FrameSkip()); <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;timer.start();	<br>
+							</div>	<br>
+							&nbsp;&nbsp;}	<br>
+							<br>
+							&nbsp;&nbsp;public void paint(Graphics g)	<br>	
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Graphics2D g2d = (Graphics2D)g;	<br>
+							<span class="comment indent2">//square drawn at x-coordinates of squareX, which increases by ten each paint()</span>	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.fillRect(squareX,200,10,10);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;squareX += 10;
+							</div>	<br>
+							&nbsp;&nbsp;}	<br>
+							<br>
+							<span class="comment indent1">//Overriding the actionPerformed method using a new class that implements ActionListener.
+							&nbsp;&nbsp;Every time the timer goes off, actionPerformed() repaints the frame</span>	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;public class FrameSkip implements ActionListener	<br>
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent event)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repaint();	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;}	<br>
+							</div>	<br>
+							}
+						</div>
+					</div>
+					<!-- Code example -->
+
+					<div class="center">
+						<canvas id="canvas3" width="640px" height="480px"></canvas>
+					</div>
+
+					<br>
+					<p>&ensp;We have now achieved movement. You may realise, however, that a line is slowly drawn across the screen despite specifying to draw a box.
+						This is because we haven't cleared the previous box from the frame, and so it simply stays on the screen. To get around this, we'll paint over the screen
+					with white as a means of "refreshing" the frame. We can do this by importing Color from awt and setting the g2d's colour.</p>
+					<div class="center">
+						<div class="code">
+							import java.awt.Color;	<br>
+							<br>
+							<span class="comment">//place this in the paint() method</span>	<br>
+							<span class="keyword">g2d.setColor(Color.WHITE);</span>	<br>
+							g2d.fillRect(0,0,640,480);	<br>
+							<span class="keyword">g2d.setColor(Color.BLACK);</span>	<br>
+							g2d.fillRect(squareX,200,10,10);
+						</div>	<br>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+				<a class="jump" id="id4">anchor</a>
+				<h2>4.Making the Gooey do stuff</h2>
+				<div class="post">
+					<p>&ensp;With our moving box from the last section, all we need to do is add player input to make the program interactive. To achieve this, we'll be using another kind of ActionListener, namely a KeyListener. Adding this to the GUI will tell the program to "listen" for a key press, firing an actionPerformed method whenever it finds that the user has done so. Using the actionPerformed method, we can check which key was pressed through <span class="snippet">event.getKeyCode()</span> and modify the player speed accordingly.
+					</p>
+
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							import javax.swing.JFrame;	<br>
+							import javax.swing.Timer;	<br>
+							import java.awt.event.*;	<br>
+							import java.awt.Graphics;	<br>
+							import java.awt.Graphics2D;	<br>
+							<span class="keyword">import java.awt.Color;</span>	<br>
+							<br>
+							class GUI extends JFrame	<br>
+							{	<br>
+							&nbsp;&nbsp;private int squareX;	<br>
+							<div class="keyword">
+							<span class="comment indent1">//Declare the speed of the player</span>	<br>
+							&nbsp;&nbsp;private int rightSpeed;	<br>
+							&nbsp;&nbsp;private int leftSpeed;	<br>
+							</div> <br>
+							&nbsp;&nbsp;public GUI()	<br>
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;squareX = 300;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;rightSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;leftSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setSize(640,480);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setVisible(true);	<br>
+							<div class="keyword">
+							<span class="comment indent2">//Tells the application to exit when the GUI close button is pressed</span> <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	<br>
+							<span class="comment indent2">//We've changed the interval to 50 to increase responsiveness</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Timer timer = new Timer(50,new FrameSkip()); <br>
+							</div>	<br> 
+							&nbsp;&nbsp;&nbsp;&nbsp;timer.start();	<br>
+							<span class="comment indent2">//A Keylistener is added, with a new overridden KeyListener</span>	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;&nbsp;&nbsp;addKeyListener(new KeyListener()  <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							<span class="comment indent3">//If the left arrow key is pressed, speed is -10. If the right one is pressed, speed is 10.</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void keyPressed(KeyEvent event)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(event.getKeyCode() == 39)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rightSpeed = 10;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(event.getKeyCode() == 37)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leftSpeed = -10;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							<span class="comment indent3">//When either keys are released, speed is set to zero.</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void keyReleased(KeyEvent event)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(event.getKeyCode() == 39)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rightSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(event.getKeyCode() == 37)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leftSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							<span class="comment indent3">//The last method is overridden with an empty method; all three need to be overridden.</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void keyTyped(KeyEvent event){}	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}); <br>
+							</div>	<br>
+							&nbsp;&nbsp;}	<br>
+							<br>
+							&nbsp;&nbsp;public void paint(Graphics g)	<br>	
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Graphics2D g2d = (Graphics2D)g;	<br>
+							<span class="comment indent2">//"Refreshing" the screen.</span>	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.setColor(Color.WHITE);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.fillRect(0,0,640,480);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.setColor(Color.BLACK);	<br>
+							</div>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.fillRect(squareX,200,20,20);	<br>
+							&nbsp;&nbsp;}	<br>
+							<br>
+							<span class="comment indent1">//Every time the timer goes off, actionPerformed() repaints the frame</span>	<br>
+							&nbsp;&nbsp;public class FrameSkip implements ActionListener	<br>
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent event)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							<span class="comment indent3">//This line will add both speeds set above to the square's x-coordinates to simulate movement.</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">squareX += rightSpeed + leftSpeed;</span>	<br>
+							<span class="comment indent3">//The change in coordinates is then painted</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repaint();	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;}	<br>
+							}
+						</div>
+					</div>
+					<!-- Code example -->
+
+					<div class="center">
+						<canvas id="canvas4" width="640px" height ="480px"></canvas>
+						<br>
+						<br>
+						<button id="buttonLeft" style="width:40px; height:40px">&larr;</button>
+						<button id="buttonRight" style="width:40px; height:40px;">&rarr;</button>
+						<button id="buttonReset" style="height:40px;">Reset</button>
+					</div>
+
+					<p>&ensp;Congratulations, we now have a game! Technically. With player input down, it is just a case of adding more methods and hit detection to make gameplay a reality.</p>
+
+				</div>
+
+
+
+
+
+
+				
+				<a class="jump" id="id5">anchor</a>
+				<h2>5.Enemies &amp; Hit Detection</h2>
+				<div class="post">
+					<p>&ensp;Finally, we'll be adding an enemy to our game, in the form of a gray box that moves downards towards the player. Whenever the enemy reaches the bottom of the screen, we'll reset its y-coordinates back to the top, and give it a random x-coordinate through <span class="snippet">Math.random()*640</span> to vary player reaction. A new check will be placed in the timer ActionListener called gameOver, which makes it that player and enemy coordinates can only be updated if the game is not over. The gameOver boolean itself will be triggered by collision detection between the two objects, as their coordinates are checked for intersection at every frame skip.
+					</p>
+					
+					<!-- Code example -->
+					<div class="center">
+						<div class="code">
+							import javax.swing.JFrame;	<br>
+							import javax.swing.Timer;	<br>
+							import java.awt.event.*;	<br>
+							import java.awt.Graphics;	<br>
+							import java.awt.Graphics2D;	<br>
+							import java.awt.Color;	<br>
+							<br>
+							class GUI extends JFrame	<br>
+							{	<br>
+							&nbsp;&nbsp;private int squareX;	<br>
+							&nbsp;&nbsp;private int rightSpeed;	<br>
+							&nbsp;&nbsp;private int leftSpeed;	<br>
+							<div class="keyword">
+							<span class="comment indent1">//Declaring enemy coordinates and a boolean to signify if the player has lost, gameOver.</span>	<br>
+							&nbsp;&nbsp;private boolean gameOver;	<br>
+							&nbsp;&nbsp;private int enemyx;	<br>
+							&nbsp;&nbsp;private int enemyy;	<br>
+							</div> <br>
+							&nbsp;&nbsp;public GUI()	<br>
+							&nbsp;&nbsp;{	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;&nbsp;&nbsp;gameOver = false;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;enemyx = 290;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;;enemyy = 0;	<br>
+							</div>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;squareX = 300;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;rightSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;leftSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setSize(640,480);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setVisible(true);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Timer timer = new Timer(50,new FrameSkip());	<br> 
+							&nbsp;&nbsp;&nbsp;&nbsp;timer.start();	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;addKeyListener(new KeyListener()  <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void keyPressed(KeyEvent event)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(event.getKeyCode() == 39)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rightSpeed = 10;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(event.getKeyCode() == 37)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leftSpeed = -10;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void keyReleased(KeyEvent event)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(event.getKeyCode() == 39)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rightSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(event.getKeyCode() == 37)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leftSpeed = 0;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void keyTyped(KeyEvent event){}	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;});	<br>
+							&nbsp;&nbsp;}	<br>
+							<br>
+							&nbsp;&nbsp;public void paint(Graphics g)	<br>	
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;Graphics2D g2d = (Graphics2D)g;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.setColor(Color.WHITE);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.fillRect(0,0,640,480);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.setColor(Color.BLACK);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.fillRect(squareX,400,20,20);	<br>
+							<div class="keyword">
+							<span class="comment indent2">//Draws the enemy on the screen</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.setColor(Color.decode("#CCCCCC"));	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;g2d.fillRect(enemyx,enemyy,40,40);	<br>
+							</div>	<br>
+							&nbsp;&nbsp;}	<br>
+							<br>
+							&nbsp;&nbsp;public class FrameSkip implements ActionListener	<br>
+							&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;public void actionPerformed(ActionEvent event)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							<span class="comment indent3">//only does calculations and repaints image if game is not over</span>	<br>
+							<div class="keyword">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!gameOver)  <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//update the coordinates of the player and enemy.</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;squareX += rightSpeed + leftSpeed;	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemyy += 10;	<br>
+							<span class="comment indent4">//If the coordinates of the player and the enemy intersect, the game is over.</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(420&gt;enemyy &amp;&amp; 360&lt;enemyy &amp;&amp; squareX+20&gt;enemyx &amp;&amp; squareX&lt;enemyx+40)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gameOver = true;	<br>
+							<span class="comment indent4">//otherwise, if player is below the visible screen;</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if(enemyy == 480)	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+							<span class="comment indent5">//reset enemy to top of screen and give it a new random x coordinate</span>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemyy = -40; <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enemyx = (int)(Math.random()*640);	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repaint();	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							</div>	<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;}	<br>
+							&nbsp;&nbsp;}	<br>
+							}
+						</div>
+					</div>
+					<!-- Code example -->
+
+					<div class="center">
+						<canvas id="canvas5" width="640px" height ="480px"></canvas>
+						<br>
+						<br>
+						<button id="buttonLeft2" style="width:40px; height:40px">&larr;</button>
+						<button id="buttonRight2" style="width:40px; height:40px;">&rarr;</button>
+						<button id="buttonStart2" style="height:40px;">Start</button>
+						<button id="buttonReset2" style="height:40px;">Reset</button>
+					</div>
+
+					<p>&ensp;As shown in the example, hit detection between game objects is simply done through a series of calculations to check if their coordinates are intersecting at any point. Calculations can be expanded to include barriers, projectiles and pick-ups to increase the scope of the game. Intricate animations could also be played by cycling through different coordinates or drawings in an array each time the timer goes off, possibly through a new paint function like <b>paintEnemy(Graphics2D g2d)</b>.
+					</p>
+					<p>&ensp;Outsourcing player and enemy calculations and drawings to individual classes would be a good next step towards understanding the connectivity of objects and strengthening object-orientated programming skills.</p>
+				</div>
+
+
+
+
+
+				<!-- EPILOGUE -->
+				<a class="jump" id="id6">anchor</a>
+				<h2>Epilogue</h2>
+				<div class="post">
+					<p>&ensp;With knowledge of the fundamentals of video games, you're now ready to start making games in java! I feel that learning to code in-game animation, hit detection and interactivity from scratch uncovered the endless creative possibilities offered by computer programming, thinking gameplay could only be achieved through dedicated development software. Java has given me a better picture of what game design may have been like in its beginnings, and made me appreciate the streamlined software we have access to today.
+					</p>
+					<span><a href="#top">Back to top</a></span>
+				</div>
+
+
+
+
+
+			</div>
+			<!-- White borders end here -->
+		</main>
+		<!-- END OF MAIN CONTENT -->
+		<footer>
+			<div class="left"><a href="https://www.bellerbys.com/find-your-course/foundation/foundation-computing" target="_blank">Bellerbys Computing Foundation</a></div>
+			<div class="middle"><span>Created by Joe Jeffcock 2018</span></div>
+			<div class="right"><span>Social Media: </span></div>
+			<div class="socialMedia">
+				<ul>
+					<li><a href="https://www.facebook.com/bellerbyscollege/" target="_blank"><img src="./assets/facebook.png" alt="facebook"></a></li>
+					<li><a href="https://www.instagram.com/bellerbys_college" target="_blank"><img src="./assets/instagram.png" alt="instagram"></a></li>
+					<li><a href="https://twitter.com/bellerbys" target="_blank"><img src="./assets/twitter.png" alt="twitter"></a></li>
+				</ul>
+			</div>
+		</footer>
+	
+		<script src="./js/tutorialExamples.js" type="text/javascript"></script>
+		<script src="./js/navbarDrop.js" type="text/javascript"></script>
+		<script src="./js/lights.js" type="text/javascript"></script>
+	</body>
+</html>

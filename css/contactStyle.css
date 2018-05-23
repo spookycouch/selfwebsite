@@ -1,0 +1,200 @@
+/** background, grid and setup **/
+html, body {
+	font-family: verdana, sans-serif;
+	height:100%;
+}
+main {
+	box-sizing: border-box;
+	width: 100%;
+	padding-top: 50px;
+	color:lightgray;
+	background-color:black;
+}
+main a {
+	color:white;
+}
+.foreground {
+	height:100%;
+	display:grid;
+	box-sizing: border-box;
+	min-height:100%;
+	width:100%;
+	align-content: center;
+	justify-content: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	grid-gap:2rem;
+}
+/** Context Boxes **/
+.contentBox {
+	background-color:#111;
+	overflow:auto;
+}
+.contentBox h3 {
+	color:white;
+	margin:0.5rem 1rem;
+}
+.findSocial, .mailList {
+	display:flex;
+}
+.findSocial, .mapBox, .mailList {
+	height:calc(100% - 3rem);
+}
+/** social media **/
+.findSocial ul {
+	padding:0;
+	margin:auto;
+	list-style-type: none;
+}
+.findSocial li {
+	display: inline-block;
+	float:left;
+	padding:16px;
+}
+.findSocial img {
+	height:75px;
+}
+
+/** mailing list **/
+.mailList form {
+	font-size:16px;
+	margin:auto 0;
+	margin-left:0.5rem;
+}
+.mailList fieldset {
+	border:none;
+}
+.mailList label {
+	height:22px;
+	margin:0.5rem 0;
+	float:left;
+}
+.mailList label[for="sponsor"] {
+	float:none;
+}
+.mailList input {
+	margin:0.5rem 0;
+}
+.mailList input[type="text"] {
+	float:right;
+}
+.mailList span {
+	display:inline-block;
+}
+
+/** google map **/
+.cb3 li {
+	font-size: 16px;
+}
+.mapBox ul {
+	margin-left:1rem;
+	margin-top:0.5rem;
+	list-style-type: none;
+	padding:0;
+}
+#googleMap {
+	width:100%;
+	height: calc(100% - 48px - 1rem); /** gives a clearance of 48px for text, along with 1rem to account for root font size **/
+}
+
+/** MEDIA QUERIES **/
+/** DESKTOP DISPLAY **/
+
+/** desktop height **/
+@media only screen and (orientation:landscape) and (min-height:700px) and (min-width:1150px)
+{
+	main {
+		height:calc(100% - 100px); /** -100px to account for the footer **/
+	}
+}
+/** larger screens **/
+@media only screen and (orientation:landscape) and (min-height:700px) 
+{
+	.foreground {
+		grid-template: 250px 250px / 400px 700px;
+	}
+}
+/** smaller screens **/
+@media only screen and (orientation:landscape) and (max-height:700px) and (min-height:500px)
+{
+	.foreground {
+		grid-template: 225px 225px / 350px 600px;
+	}
+}
+/** grid layout **/
+@media only screen and (orientation:landscape) and (min-height:500px) and (min-width:1150px)
+{
+	.cb1 {
+		grid-area: 1 / 1 / span 1/ span 1;
+	}
+	.cb2 {
+		grid-area: 2 / 1 / span 1/ span 1;
+	}
+	.cb3 {
+		grid-area: 1 / 2 / span 2/ span 1;
+	}
+}
+
+/** SMALL DESKTOP/ TABLET **/
+@media only screen and (max-width:1150px) , (orientation:portrait)
+{
+	.foreground {
+		grid-template: 500px 225px / 350px 350px;
+	}
+	.cb1 {
+		grid-area: 2 / 1 / span 1/ span 1;
+	}
+	.cb2 {
+		grid-area: 2 / 2 / span 1/ span 1;
+	}
+	.cb3 {
+		grid-area: 1 / 1 / span 1/ span 2;
+	}
+}
+/** PHONE **/
+@media only screen and (max-width:800px) , (max-height:500px)
+{
+	main {
+		font-size:0.875rem;
+	}
+	.foreground {
+		grid-template: 400px 250px 250px / 400px;
+	}
+	.cb1 {
+		grid-area: 2 / 1 / span 1/ span 1;
+	}
+	.cb2 {
+		grid-area: 3 / 1 / span 1/ span 1;
+	}
+	.cb3 {
+		grid-area: 1 / 1 / span 1/ span 1;
+	}
+}
+/** SMALL PHONE **/
+@media only screen and (max-width:420px)
+{
+	.foreground {
+		grid-template: 120vw 200px 300px / 100%;
+	}
+	.findSocial img {
+		height:60px;
+	}
+	.findSocial li {
+		padding:14px;
+	}
+	.mailList form {
+		font-size: 14px;
+	}
+	.mailList input[type="text"] {
+		margin: 0;
+		margin-bottom:0.5rem;
+		float:left;
+		clear:left;
+	}
+	.mapBox {
+		height:calc(100% - 3.5rem);
+	}
+	.cb3 li {
+		font-size: 14px;
+	}
+}

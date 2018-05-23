@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono');
+
+/** snippets. Use this class when a small, one line example of code is to be displayed **/
+
+.snippet {
+	display:inline-block;
+	padding: 0.5em;
+	margin: 0.5rem 0;
+	border: 3px solid black;
+	border-radius: 10px;
+	font-family: 'IBM Plex Mono', courier,serif;
+	color:#00FF33;
+	background-color: #222222;
+}
+
+/** Code.css. This is the stylesheet for any coded examples in the page.
+	All code should be written within a <div> of class "code".
+	Indents are added using divs of class "indent".
+	New lines are written using <br> and should not be directly before a </div>. 
+	Comments will be contained in <div>s or <span>s of class "comment". **/
+
+.code {
+	display:inline-block;
+	padding:0.5em;
+	border: 3px solid black;
+	border-radius: 20px;
+	margin: 1rem 0;
+
+	max-width:640px;
+	overflow: auto;
+
+	font-family: 'IBM Plex Mono', courier,serif;
+	color:#00FF33;
+	background-color: #222222;
+	text-align: left;
+}
+
+/** COLOUR-CODING **/
+.keyword {
+	color:white;
+	background-color:black;
+}
+.comment {
+	display:inline-block;
+	color:gray;
+}
+
+/** INDENTATION **/
+.indent1 {
+	margin-left:1em;
+}
+.indent2 {
+	margin-left:2.5em;
+}
+.indent3 {
+	margin-left:3.5em;
+}
+.indent4 {
+	margin-left:5em;
+}
+.indent5 {
+	margin-left:6em;
+}
+.code div {
+	display: inline-block;
+}
+
+/** change h1 and h2 fonts to code font**/
+main h1, main h2 {
+	font-family: 'IBM Plex Mono', courier,serif;
+}
+
+
+/** MEDIA QUERIES **/
+
+@media only screen and (max-width: 1100px) and (min-width:800px){
+	.code  {
+		max-width:540px;
+	}
+}
+/** Tablet **/
+@media only screen and (max-width:800px) and (min-width:600px){
+	.code {
+		max-width: 450px;
+	}
+}
+
+/** Phone & Tablet **/
+@media only screen and (max-width:600px) and (min-width:480px){
+	.code {
+		max-width: 360px;
+	}
+}
+
+/** Phone **/
+@media only screen and (max-width:480px) {
+	.code
+	{
+		max-width:280px;
+	}
+}
