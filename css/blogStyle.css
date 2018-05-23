@@ -49,6 +49,7 @@ main a {
 	text-decoration: none;
 }
 canvas {
+
 		border:1px solid lightgray;
 		width:auto;
 		height:auto;
@@ -152,6 +153,9 @@ canvas {
 	main img, canvas {
 		max-width:350px;
 		max-height:350px;
+	}
+	canvas {
+		border:1px solid lightgray;
 	}
 }
 /** Phone - small **/
