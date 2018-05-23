@@ -154,7 +154,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	.imageContainer {
 		height:95vw; /** 95vw chosen to account for scrollbar **/
 		width:100%;
-		border-bottom:1.5px solid #47baae;
+		border:1.5px solid #47baae;
 	}
 	.imageContainer img,.imageContainer video,.imageContainer audio {
 		max-width:100%;
