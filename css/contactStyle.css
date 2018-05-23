@@ -59,14 +59,15 @@ main a {
 .mailList form {
 	font-size:16px;
 	margin:auto 0;
-	margin-left:0.5rem;
+	margin-left:16px;
 }
 .mailList fieldset {
+	padding:0;
 	border:none;
 }
 .mailList label {
 	height:22px;
-	margin:0.5rem 0;
+	margin:8px 0;
 	float:left;
 }
 .mailList label[for="sponsor"] {
