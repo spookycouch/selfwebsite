@@ -49,12 +49,12 @@ main a {
 	text-decoration: none;
 }
 canvas {
-
-		border:1px solid lightgray;
-		width:auto;
-		height:auto;
-		max-width:640px;
-		max-height:480px;
+	box-sizing:content-box;
+	border:1px solid lightgray;
+	width:auto;
+	height:auto;
+	max-width:640px;
+	max-height:480px;
 }
 .center {
 	text-align:center;
@@ -153,9 +153,6 @@ canvas {
 	main img, canvas {
 		max-width:350px;
 		max-height:350px;
-	}
-	canvas {
-		border:1px solid lightgray;
 	}
 }
 /** Phone - small **/
