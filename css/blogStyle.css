@@ -49,12 +49,16 @@ main a {
 	text-decoration: none;
 }
 canvas {
-	box-sizing:padding-box;
-	border:1px solid lightgray;
+	display:block;
 	width:auto;
 	height:auto;
 	max-width:640px;
 	max-height:480px;
+}
+.canvasWrapper {
+	vertical-align: top;
+	display:inline-block;
+	border:1px solid lightgray;
 }
 .center {
 	text-align:center;
