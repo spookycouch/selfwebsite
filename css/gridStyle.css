@@ -1,3 +1,4 @@
+/** main and grid setup **/
 main {
 	font-family: verdana, sans-serif;
 	color:#daf1ee; /** #ecf8f6 also good **/
@@ -22,7 +23,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	padding:50px 5%;
 	display:grid;
 	grid-template-columns: repeat(3,360px); /** 3-column grid **/
-	grid-template-rows: calc(360px + 7.5rem);
+	grid-template-rows: calc(360px + 7.5rem); /** image fixed 360px and 7.5rem text container **/
 	grid-auto-rows: calc(360px + 7.5rem);
 	grid-row-gap: 50px;
 	justify-content:space-around;
@@ -37,6 +38,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	height:100%;
 	width:100%;
 	background-color: black;
+	box-shadow: 0 0 30px 1px #000;
 }
 /** images **/
 .imageContainer {
@@ -44,7 +46,6 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	display: flex;
 	height:360px;
 	width:360px;
-	border: 1.5px solid #2c9c91; /** 1.5px used to prevent visual glitches at <1px level **/
 }
 .imageContainer img,.imageContainer video,.imageContainer audio {
 	max-height:100%;
@@ -62,7 +63,6 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	height: 7.5rem; /** 7.5rem for the text container **/
 	padding:0.5rem;
 	overflow:auto;
-	border: 1px solid #2c9c91;
 	border-top:none;
 	background-color: #47baae;
 }
@@ -75,21 +75,21 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 .textContainer a {
 	text-decoration: none;
 }
-/** OPACITY REMOVED **/
+/** MEDIA QUERIES **/
+/** small Desktop **/
 @media only screen and (max-width:1280px)
 {
 	.grid {
 		grid-template-columns: repeat(2,360px); /** 2-column grid **/
 	}
 }
+/** Tablet **/
 @media only screen and (max-width:860px)
 {
 	main {
 		font-size:14px;
 	}
-	
 }
-/** MEDIA QUERIES **/
 /** Tablet & large Phone in Portrait **/
 @media only screen and (max-width:860px) and (min-width:421px) and (orientation:portrait)
 {
@@ -128,8 +128,8 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 		height:6rem;
 	}
 	.imageContainer img,.imageContainer video,.imageContainer audio {
-		max-height:222px;
-		max-width:397px; /** set to column width to revalidate image **/
+		max-height:225px;
+		max-width:400px; /** set to column width to revalidate image **/
 	}
 }
 /** small Phone and below **/
@@ -149,15 +149,16 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 		grid-auto-rows: calc(95vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
 	}
 	.gridItem {
-		background-color: #47baae;
+		background-color: #000;
 	}
 	.imageContainer {
 		height:95vw; /** 95vw chosen to account for scrollbar **/
 		width:100%;
-		border:1.5px solid #47baae;
+		overflow:hidden;
 	}
 	.imageContainer img,.imageContainer video,.imageContainer audio {
-		max-width:100%;
-		max-height:100%;
+		align-self:center;
+		max-width:calc(100% + 5px); /** slight margin for overflow to fill screen **/
+		max-height:calc(100% + 5px); /** slight margin for overflow to fill container**/
 	}
 }

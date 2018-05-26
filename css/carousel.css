@@ -18,7 +18,7 @@
 #carouselSlides {
 	position:relative;
 	height:100%;
-	transition: left 4s ease-in-out;
+	transition: transform 4s ease-in-out;
 }
 /** individual slides; screen-wide items with itemImages inside **/
 .carouselItem {
@@ -108,13 +108,16 @@
 	/** carousel buttons have larger surface area for touch screen use **/
 	.carouselButtons li {
 		font-size:48px;
-		padding: 0 4px;
+		padding: 0 8px;
 	}
 	#cButton1 {
 		padding-left:16px;
 	}
 	#cButton3 {
 		padding-right:16px;
+	}
+	#carouselSlides {
+		transition: transform 3s ease-in-out;
 	}
 }
 @media only screen and (max-width:600px) , (orientation:portrait)

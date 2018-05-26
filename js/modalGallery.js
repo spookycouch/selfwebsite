@@ -166,6 +166,7 @@ function displayModal(mediaIn)
 		modalAudio.style.display = "inline-block";
 	}
 	modal.style.display = "flex";
+	/** sets the modal text and counter **/
 	modalTitle.textContent = mediaIn.getElementsByTagName("h3")[0].textContent;
 	modalText.textContent = mediaIn.getElementsByTagName("span")[0].textContent;
 	document.getElementById("imageCounter").textContent = parseInt(currentId) + 1 + "/" + currentItems.length;

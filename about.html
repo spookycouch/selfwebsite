@@ -37,13 +37,14 @@
 			<!-- Drop-down menu -->
 			<div id="dropToc">
 				<ul>
-					<li>	<a href="#id1">Introduction</a>	</li>	
-					<li>	<a href="#id2">0.5. Loading and Saving</a>	</li>
-					<li>	<a href="#id3">1. Creating GUIs</a>	</li>
-					<li>	<a href="#id4">	2. Drawing with GUIs</a>	</li>
-					<li>	<a href="#id5">	3. Animation with GUIs</a>	</li>
-					<li>	<a href="#id6">	4. Input with GUIs</a>	</li>
-					<li> 	<a href="#id7"> 5. Enemies &amp; Hit Detection</a>	</li>
+					<li>	<a href="#id1">1.Concept</a>	</li>
+					<li>	<a href="#id2">2.Design</a>	</li>
+					<li>	<a href="#id3">3.Development</a>	</li>
+					<li>	<a href="#id4">4.Implimentation</a>	</li>
+					<li>	<a href="#id5">5.Testing</a>	</li>
+					<li>	<a href="#id6">6.User Experience &amp; Feedback</a>	</li>
+					<li>	<a href="#id7">7.Challenges Faced</a>	</li>
+					<li>	<a href="#id8">8.Evaluation</a>	</li>
 					<li class="buttonli">	<button type="button" class="lights" onclick="triggerLights();">Low-light mode: off</button> </li>
 				</ul>
 			</div>
@@ -61,7 +62,7 @@
 				<!-- TABLE OF CONTENTS START -->
 				<div class="post tableOfContents">
 					<h2>Table of Contents:</h2>
-					<p>Development was carried out page-by-page, however I have arranged everything by process for clearer flow and overview of design choices.
+					<p>&ensp;Development was carried out page-by-page, however I have arranged everything by process for a clearer flow and overview of design choices.
 					</p>
 					<Ul>
 						<li>	<a href="#id1">1.Concept</a>	</li>
@@ -71,7 +72,7 @@
 						<li>	<a href="#id5">5.Testing</a>	</li>
 						<li>	<a href="#id6">6.User Experience &amp; Feedback</a>	</li>
 						<li>	<a href="#id7">7.Challenges Faced</a>	</li>
-						<li>	<a href="#id8">8.Conclusion</a>	</li>
+						<li>	<a href="#id8">8.Evaluation</a>	</li>
 					</Ul>
 					<!-- button to inverse colours -->
 					<button type="button" class="lights" onclick="triggerLights();">Low-light mode: off</button>
@@ -92,7 +93,7 @@
 					<p>&ensp;Knowing that we would be working with text, the first images that came to mind were of the computers used in the Alien franchise and Fallout video games. These were akin to personal computers in the 80s by companies such as IBM, which used green phosphor screens for their monitors.
 					</p>
 					<div class="center">
-						<img src="./images/fallout.jpg">
+						<img src="./images/about/fallout.jpg">
 						<br>
 						<span class="subtitle">screenshot of Fallout 3 taken from user knowledge2035, Flickr</span>
 					</div>
@@ -107,7 +108,7 @@
 						of all my past works. Meanwhile, an added tutorial on programming video games in java -inspired by my own inquiries into the language- would allow me to implement my earlier ideas and function to bring in more traffic to the website; a dedicated web page being beneficial to anyone interested in the subject, as I had found it difficult to source similar articles online.
 					</p>
 					<div class="center">
-						<img class="lightBorder" src="./images/eGum.png">
+						<img class="lightBorder" src="./images/about/eGum.png">
 						<br>
 						<span class="subtitle">Still from Exploding Gum (2010), my first original animation which can be viewed <a href="https://www.newgrounds.com/portal/view/554468" target="_blank">here</a></span>
 					</div>
@@ -135,7 +136,12 @@
 					<h3>Research</h3>
 					<p>&ensp;Before starting the design process, I researched a few popular websites to see how content is purposefully laid out. Looking at text-heavy websites like facebook and GitBook, I noticed a vertical flow of content with white and gray being the primary colours used in the background.
 					</p>
-					<p>&ensp;Observing image heavy-websites such as instagram and pinterest, items displayed in grids that offer a selection of content to choose from. Applications like Netflix and even iTunes (dark theme) had also shown an effective use of colour and contrast, employing dark backgrounds to make content stand out to users.
+					<div class="center">
+						<img src="./images/about/netflix.png">
+						<br>
+						<span class="subtitle"><a href="https://www.netflix.com" target="_blank">Netflix's</a> browse page and use of contrast</span>
+					</div>
+					<p>&ensp;Observing image heavy-websites such as instagram and pinterest, items displayed in grids that offer a selection of content to choose from. Applications like Netflix and even Spotify had also shown an effective use of grids, colour and contrast in their browse sections, employing dark backgrounds to make content stand out to users.
 					</p>
 					<p>&ensp;The basic design functions of these websites were taken into account when I first started creating the layouts and colour schemes of the web pages my project was going to have.
 					</p>
@@ -149,7 +155,7 @@
 					<p>&ensp;The home and gallery pages will be comprised mainly of images and diagrams, meaning a grid-based approach would be quite suitable. A responsive grid could capitalise on the space available on the screen and show a high amount of content in an organised manner. It would also make the website more interactive as content is displayed as a selection rather than in a standard consecutive order. 
 					</p>
 					<div class="center">
-						<img src="./images/bootstrapGrid.png">
+						<img src="./images/about/bootstrapGrid.png">
 						<br>
 						<span class="subtitle">Screenshot of the grid made in bootstrap (resized for this page). Click <a href="./misc/bootstrapGrid.html" target="_blank">here</a> to see the full web page</span>
 					</div>
@@ -159,7 +165,7 @@
 					<h4>About &amp; Tutorial</h4>
 					<p>&ensp;On the other hand, the tutorial and about pages will contain a large amount of text, and as such a portrait, bordered, blog style was chosen for them; a downward flow of content making it easier to read. The mobile versions of these pages would remain almost identical to the desktop ones, while hyperlinks will be created to jump to content lower down on the site for ease of access.</p>
 					<div class="center">
-						<img src="./images/cssBlog.png">
+						<img src="./images/about/cssBlog.png">
 						<br>
 						<span class="subtitle">Screenshot of the blog made with css (resized for this page). Click <a href="./misc/cssBlog.html" target="_blank">here</a> to see the full web page</span>
 					</div>
@@ -168,7 +174,7 @@
 					<p>&ensp;Given the contact page would have the least amount of content with the most variance, I approached my friends in the art department for advice on its layout. I proposed a three-box page where content is divided based on the type of information. They were agreeable on this, while my friend in the media foundation added that readers have a bias towards the right side of documents, magazines usually placing important information there so it is noticed.
 					</p>
 					<div class="center">
-						<img src="./images/contactGrid.png">
+						<img src="./images/about/contactGrid.png">
 						<br>
 						<span class="subtitle">Screenshot of the content page made with css (resized for this page). Click <a href="./misc/contactGrid.html" target="_blank">here</a> to see the full web page</span>
 					</div>
@@ -264,7 +270,7 @@
 
 				<!-- DEVELOPMENT CHAPTER START -->
 				<a class="jump" id="id3">anchor</a>
-				<h2>3.Development</h2>
+				<h2>3.Development (presentation)</h2>
 				<div class="post">
 					<!-- PLAN DEV BRIEF -->
 					<h3>Plan</h3>
@@ -291,7 +297,12 @@
 					<h3>Blogs - Tutorial &amp; About</h3>
 					<p>&ensp;When I first approached the blog pages, I used a percentage for all the widths to make responsiveness easier in future. This, however, resulted in some awkward layouts and positioning of elements, and instead opted for fixed widths and media queries to account for devices of different dimensions. This allowed me to set exactly how content will look on different sized screens, such that its would flow naturally on all devices by using breakpoints based on how information was laid out on the page.
 					</p>
-					<p>&ensp;The main elements used to create the blogs are the divs of class "blog" and "post". The "blog" class dictates the white fill you see around the right text here on this page, while post separates content by chapters both structurally, as it is contained in individual divs, and visually by adding a gray line to the display.
+					<div class="center">
+						<img class="lightBorder" src="./images/about/tabletBlog.png">
+						<br>
+						<span class="subtitle">Screenshot of the tutorial in tablet view, made to fit</span>
+					</div>
+					<p>&ensp;The main elements used to create the blogs are the divs of class "blog" and "post". The "blog" class dictates the white fill you see around the right text here on this page, while post separates content by chapters both structurally, as it is contained in individual divs, and visually by adding a gray line to the display. The white blog space was set to a width of <b>1000px</b> on screens larger than <b>1100px</b> wide, shrinking incrementally according to device size before occupying the entire screen width on displays less than <b>600px</b> wide.
 					</p>
 					<br>
 					
@@ -303,17 +314,34 @@
 
 					<!-- GRID DEV BRIEF -->
 					<h3>Grids- Home &amp; Gallery</h3>
-					<p>&ensp;The decision to used fixed withs for separate breakpoints made development of the grids in the home and gallery much simpler, as I was simply able to choose a width for each of the three grid-columns that would appear on desktops and add content to them accordingly. Once this was done, I resized the browser until it was small enough that the layout would be broken, and reduced the number of columns on screen at that specific width using media queries. Once the screen was too small for the default grid-column width, it was set to the screen width itself such that it would fit perfectly on handheld devices.
+					<p>&ensp;The decision to used fixed widths for separate breakpoints made development of the grids in the home and gallery much simpler, as I was simply able to choose a width (<b>360px</b>) for each of the three grid-columns that would appear on desktops and add content to them accordingly. Once this was done, I resized the browser until it was small enough that the layout would be broken, and reduced the number of columns on screen at that specific width using media queries. Once the screen was too small for the default grid-column width, it was set to the screen width itself such that it would fit perfectly on handheld devices.
 					</p>
-					<p>&ensp;A second grid-size was also added to account for tablet users on portrait and landscape screens with small heights, displaying grid items in one column with a much larger width to make full use of the dimensions of these devices.
+					<span>Here's a brief rundown of the number of columns at different sizes:</span>
+					<ul style="list-style-type: none;">
+						<li>&gt; 1280px - 3 columns</li>
+						<li>&lt; 1280px - 2 columns</li>
+						<li>&lt; 860px - 1 column</li>
+						<li>&lt; 420px - 1 column, 100%</li>
+					</ul>
+					<div class="center">
+						<img src="./images/about/galleryPortrait.png" style="border: 1px solid gray">
+						<br>
+						<span class="subtitle">Screenshot of the gallery in portrait</span>
+					</div>
+					<p>&ensp;A second grid-size was also added to account for tablets on portrait and screens with small heights (<b>&lt;500px</b>), displaying grid items in one column with a much larger width to make full use of the dimensions of these devices.
 					</p>
 					<br>
 
 					<!-- HEADER DEV BRIEF -->
 					<h3>Header</h3>
-					<p>&ensp; To create the header of the website, I first started with a simple div that spanned the entire width of the screen. I knew the navigation buttons would need to be split into two groups; those that collapse in mobile view and those that remain, so divs were created for each of those too. I then went about creating horizontal lists with links and drop-down menus that appeared off-screen.</p>
+					<p>&ensp; To create the header of the website, I first started with a simple div of height <b>50px</b> that spanned the entire width of the screen. I knew the navigation buttons would need to be split into two groups; those that collapse in mobile view and those that remain, so divs were created for each of those too. I then went about creating horizontal lists with links and drop-down menus that appeared off-screen.</p>
 					<p>&ensp;Following this, a media query was created for smaller devices, where a hamburger icon was set to appear and page navigation buttons displayed vertically, off the screen. Links were made live and the navbar was copied to each page, needing only javascript to be added during implementation that would operate the drop-down and sliding menus.
 					</p>
+					<div class="center">
+						<img class="lightBorder" src="./images/about/navbar.png">
+						<br>
+						<span class="subtitle">Screenshot of the navbar viewed on a mobile device</span>
+					</div>
 					<br>
 
 					<!-- FOOTER DEV BRIEF -->
@@ -344,13 +372,32 @@
 					<div class="center subtitle">Diagram depicting the footer layout</div>
 					<!-- Footer example diagram END -->
 					<br>
-					<p>&ensp;I found this to be effective as it allowed me to maintain the footer in three equal parts, with the last one being able to host a multitude of content that could be rearranged freely. This proved useful in responsive design as sections will be shifted to a vertical layout, with the last one split into two for text and icons.
+					<p>&ensp;I found this to be effective as it allowed me to maintain the footer in three equal parts, with the last one being able to host a multitude of content that could be rearranged freely. This proved useful in responsive design as the three sections are shifted to a vertical layout at smaller displays, the last one split into two further rows for text and icons. The footer is set to be <b>100px</b> and <b>200px</b> high on desktops and mobile devices respectively.
 					</p>
 					<br>
 
 					<!-- CONTACT PAGE DEV BRIEF -->
 					<h3>Contact</h3>
-					<p>&ensp;Given the simple layout displayed in the design process, developing the contact page for the website was fairly easy. However, since the grid items were of different sizes, I needed to find a way to suitably display them responsively depending on the size of the screen being used. In doing so, I came up with three different layouts; one each for desktops, tablets, and phones/devices with relatively low heights. Three basic dimensions were chosen to start with, with widths of <b>&lt;800px</b>, <b>800px&gt; &amp; &lt;1150px</b>, and <b>&gt;1150px</b>. I then tested the page at different sizes to establish breakpoints and create more specific queries between the three.</p>
+					<p>&ensp;Given the simple layout displayed in the design process, developing the contact page for the website was fairly easy. However, since the grid items were of different sizes, I needed to find a way to suitably display them responsively depending on the size of the screen being used. In doing so, I came up with three different layouts; one each for desktops, tablets, and phones/devices with relatively low heights. Three basic dimensions were chosen to start with, with widths of <b>&lt;800px</b>, <b>800px&gt; &amp; &lt;1150px</b>, and <b>&gt;1150px</b>. I then tested the page at different sizes to establish breakpoints and create more specific queries between the three. The row content for each of the three basic layouts is listed below:</p>
+					<br>
+					<span><b>&gt; 1150px</b></span>
+					<ul style="list-style-type: none;">
+						<li>row 1 - Social Media, Map</li>
+						<li>row 2 - Mailing List, Map</li>
+					</ul>
+					<span><b>&lt; 1150px</b></span>
+					<ul style="list-style-type: none;">
+						<li>row 1 - Map</li>
+						<li>row 2 - Social Media, Mailing List</li>
+					</ul>
+					<span><b>&lt; 800px</b></span>
+					<ul style="list-style-type: none;">
+						<li>row 1 - Map</li>
+						<li>row 2 - Social Media</li>
+						<li>row 2 - Mailing List</li>
+					</ul>
+					<p>&ensp;As with the other grid pages, a designated grid template was set for devices in portrait mode and screens of smaller heights.
+					<br>
 				</div>
 				<!-- DEVELOPMENT CHAPTER END -->
 
@@ -367,12 +414,22 @@
 					<h3>Tutorial</h3>
 					<p>&ensp;Coded examples were first made by me in Java based on how appropriate I felt they were in teaching game design. This was then moved over into html to be styled by "code.css", and descriptions were added for each leg of the tutorial. I was at first going to use screenshots to show how the products should look like, but decided interactive applications would garner more attention instead. Given the similarities between Java and Javascript, translating the code over into my document was relatively straightforward, using canvases instead of GUIs and Intervals instead of timers.
 					</p>
+					<div class="center">
+						<img class="lightBorder" src="./images/about/jsExample.png">
+						<br>
+						<span class="subtitle">Screenshot of an interactive example coded in javascript</span>
+					</div>
 					<br>
 
 					<!-- GALLERY IMPL BRIEF -->
 					<h3>Gallery</h3>
 					<p>&ensp;Photos and descriptions were added to the gallery, followed by the implementation of a modal gallery and a content filter. The modal gallery is a block of html at the start of the document that takes up the entire screen, containing buttons and one of each - image, video and audio - element. Each media element is given an ID, and clicking on one will bring up the modal and set its media to that of the index ID in an array of all the elements on the page. Meanwhile, hovering over an image will cause it to "light up" while all the rest are darkened, until another is hovered over to the same effect.
 					</p>
+					<div class="center">
+						<img src="./images/about/filter.png" style="border: 1px solid gray">
+						<br>
+						<span class="subtitle">Filtering the gallery to display art</span>
+					</div>
 					<p>&ensp;The filter for the gallery was done separately from the features mentioned above, removing and displaying elements from the page based on the category it was given in its class. To implement this into the modal gallery, an array of items shown had to be created that had items added based on category if they were set to be shown by the filter. This would be sorted to make sure items appear in the correct order, and the array passed to the modal gallery for viewing. The challenge of implementing these features separately will be mentioned later on in the development blog.
 					</p>
 					<br>
@@ -381,13 +438,26 @@
 					<h3>Index</h3>
 					<p>&ensp;Since I did not use bootstrap in creating my website, I had to find a way to create my own carousel to showcase highlights in the homepage. I achieved this by setting each slide in a div of width 100%, positioning one at the top-left of main, while the rest were located off-screen. Javascript could then be used to change the coordinates of the slides, with a transition in css to animate them in and out of the screen. Buttons were also added such that users could choose which slide to display.
 					</p>
+					<div class="center">
+						<img src="./images/about/carousel.png" style="border: 1px solid gray">
+						<br>
+						<span class="subtitle">Carousel viewed on high height:width ratio screens</span>
+					</div>
+					<p>&ensp;Some of the images do cut off towards the right on screens with significantly higher height than width. This however, was purposefully designed, as I did not want to sacrifice the height of the image to account for the exceeding width, while most of the key content is located towards the left of the carousel images and still remain visible.
+					</p>
+					<p>&ensp;Links to each page on the site were added with images as a visual directory on the home page, though the store link brings users to a third party website rather than an in-built store. This was chosen as independent media developers rarely handle transactions by themselves, outsourcing product sales to other websites with better infrastructure such as Etsy, BigCartel and Redbubble.
 					<br>
 
 					<!-- NAV IMPL BRIEF -->
 					<h3>Navbar</h3>
 					<p>&ensp;With the menus already in place at different device sizes, javascript was added such that menus would drop/slide in and out of the screen by changing their absolute coordinates, while users could click outside of the menus to retract them and continue surfing the site to increase intuitiveness. Further script sets the display of a transluscent screen that darkens content outside of hamburger menus, as well as changing the direction of arrows on drop-down menus.
 					</p>
-					<p>&ensp;The website logo depicts a couch in low-resolution to give the website a more casual and artistic feel.
+					<div class="center">
+						<img src="./images/about/spookycouch.png">
+						<br>
+						<span class="subtitle">The couch logo</span>
+					</div>
+					<p>&ensp;The website logo depicts a couch drawn in low-resolution to give the website a more casual and artistic feel, as well as fitting with the theme of vintage computers in the tutorial section.
 					</p>
 					<br>
 
@@ -400,13 +470,23 @@
 					<!-- FOOTER IMPL BRIEF -->
 					<h3>Footer</h3>
 					<p>&ensp;Links to related school websites were added to the footer, with low-resolution buttons to social media sites that I had drawn to fit the theme of the project.</p>
+					<div class="center">
+						<img src="./images/about/socialMedia.png">
+						<br>
+						<span class="subtitle">Facebook, Instagram and Twitter icons</span>
+					</div>
 					<br>
 
 					<!-- CONTACT IMPL BRIEF -->
 					<h3>Contact</h3>
-					<p>&ensp;Lastly, an embedded google map was added to the contact page, along with a form to subscribe to the proposed mailing list for the website and links to social media. Simple validation of the form was done in html, as pop-ups such as those used in Javascript tend to hamper user experience, while in-built alerts do a great job of alerting users as to what they need to fill in.
+					<p>&ensp;Lastly, an embedded google map was added to the contact page, along with a form to subscribe to the proposed mailing list for the website and links to social media. Simple validation of the form was done in html, as pop-ups such as those used in Javascript tend to hamper user experience, while in-built alerts do a great job of alerting users as to what they need to fill in. Post was used in the form as email and name are relatively sensitive data.
 					</p>
-					<p>I first attempted to link google maps to the iframe by myself using a href, however found that google had blocked this option - presumably to enforce fair use of their product. With other options requiring a paid API, I asked my classmate, Roman, if he was able to get google map support on his site. He directed me to an embed option, in which google provided a specific link that allowed users to display their maps, and the problem was solved.
+					<div class="center">
+						<img src="./images/about/formValidation.png">
+						<br>
+						<span class="subtitle">Form validation using "required"</span>
+					</div>
+					<p>&ensp;I first attempted to link google maps to the iframe by myself using a href, however found that google had blocked this option - presumably to enforce fair use of their product. With other options requiring a paid API, I asked my classmate, Roman, if he was able to get google map support on his site. He directed me to an embed option, in which google provided a specific link that allowed users to display their maps, and the problem was solved. A dummy location in my home country was chosen for the google map as a personal touch.
 					</p>
 					<br>
 
@@ -479,27 +559,34 @@
 
 					<!-- RESPONSIVENESS TEST BRIEF -->
 					<h3>Responsiveness</h3>
-					<p>&ensp;Website was designed to be responsive to mobile devices, however a few additional breakpoints cropped up when testing different sizes. Responsiveness was tested up to a minimum of 300px in screen-width, as this is the minimum for most phones today, while most companies design their websites to this specification.
+					<p>&ensp;The website was designed to be responsive to mobile phones and tablets, however a few additional breakpoints cropped up when testing different sizes. Responsiveness was tested up to a minimum of 300px in screen-width, as this is the minimum for most phones today, while most companies design their websites to this specification. The website was also deployed online to <a href="https://spookycouch.github.io/selfwebsite.github.io/index.html" target="_blank">GitHub Pages</a> so it could be tested across devices such as mobile phones with ease.
 					</p>
-					<p>&ensp;The tutorial and about blog pages were tested first, and it was discovered the test tables above were too big for the screen at smaller widths; font-size was reduced such that it would fit within the designated margins. All other content was displayed as expected at all device sizes, and as such, no further changes were made to the presentation of these pages.
+					<p>&ensp;The tutorial and about blog pages were tested first, and it was discovered the test tables above were too big for the screen at smaller widths; font-size was reduced such that it would fit within the designated margins. Borders of the canvases for tutorial examples were also displaying sub-1px on mobile phones, which I discovered online to be a rendering issue. To solve this, I simply wrapped the canvases in a div and applied borders to those. All other content was displayed as expected at all device sizes, and as such, no further changes were made to the presentation of these pages.
 					</p>
 					<p>&ensp;At sreen widths of lower than 400px, the grid items took up more space than the visible screen space on the home and gallery pages. I realised this was because I had used 100vw for the grid item width, making it occupy the extra space covered by the scrollbar. To solve this, I instead used a width of 100%, and set the height to 95vw such that it would maintain a square-like shape. Following this, content appeared as it should at all device sizes.
 					</p>
-					<p>&ensp;Contact page was tested at all sizes and the grid items fit accordingly. The mailing list did however appear awkward at width:300px, so the inputs were changed to float left and the box expanded to make it look flush with the rest of the page.
+					<p>&ensp;Contact page was tested at all sizes on desktop and the grid items fit accordingly. The mailing list did however appear awkward at width:300px, so the inputs were changed to float left and the box expanded to make it look flush with the rest of the page. The form was also not rendered properly when tested on my Samsung phone's chrome browser, as radio buttons appeared on top of the text fields. I proceeded to split the fieldset into two - by text inputs and radio buttons - and the form appeared as intended across both browsers.
 					</p>
 					<p>&ensp;The navbar and footer were also tested at different device sizes. The footer appeared as it should on each page, however the navbar had broken at around 310px in width on the tutorial and about pages due to the size of the "Contents" button. The couch logo size was reduced by 2px below widths of 320px to account for this, the navbar appearing normal up to the minimum screen width afterwards. Drop-down and hamburger menus were tested for each page and appeared in order, no changes were made.
-					</p> 
+					</p>
+					<br>
+
+					<!-- BROWSER TEST BRIEF -->
+					<h3>Browser Support</h3>
+					<p>MS EDGE - align self centre, 1px box-shadow bug
+						
+					</p>
 
 					<!-- CAROUSEL TEST BRIEF -->
 					<h3>Index- Carousel</h3>
-					<p>&ensp;I noticed low performance when the carousel was changing slides, and realised that setting the coordinates of all four carousel items individually was inefficient and could place an unnecessary load on the browser.
+					<p>&ensp;I noticed low performance when the carousel was changing slides during testing, and realised that setting the left position of all four carousel items individually was inefficient and placed an unnecessary load on the browser. To resolve the issue, I first placed all the slides into one div such that only one coordinate needed to be changed instead. It also made the code easier to manage as sizing of individual slides would be based on the large slider rather than the carousel itself. Javascript and css was altered accordingly.
 					</p>
 					<div class="center">
-						<img src="./images/changeCoords.png">
+						<img src="./images/about/changeCoords.png">
 						<br>
 						<span class="subtitle">Screenshot of the change viewed from the inspector</span>
 					</div>
-					 <p>&ensp;To try and resolve the issue, I placed all the slides into one div such that only one coordinate needed to be changed instead. It also made the code easier to manage as sizing of individual slides would be based on the large slider rather than the carousel itself. Javascript and css was altered accordingly.
+					 <p>&ensp;The framerate was still quite choppy, so I set the "transform" property to change coordinates via translateX, such that the browser would only need to repaint the slides at a different positions instead of reworking the entire layout at each frameskip. Once this was done, the carousel was able to perform smoothly.
 					 </p>
 					 <!--
 					 <p>I had also realised that resizing the browser would cause the height of images in the carousel to change, however the content width of the image would remain the same, despite the inspector showing it had changed. This would happen regardless of width being set to auto, and the image would snap into the correct size upon a right-click or refresh. I realised this was to do with setting the height to a percentage of the flex-box, and managed to solve the problem by manually setting the height of the image to be 90% of the carousel (36vw &amp; 45vh).</p>
@@ -515,6 +602,18 @@
 				<a class="jump" id="id6">anchor</a>
 				<h2>6.User Experience &amp; Feedback</h2>
 				<div class="post">
+					<!-- LOAD UX BRIEF -->
+					<h3>Load Times</h3>
+					<p>&ensp;To ensure the website remains enjoyable to users, my first priority was to ensure download speeds were as fast as possible. Pages are kept to a maximum size of 2MB (excluding audio and video) to ensure they load quickly and do not keep users waiting. 
+					</p>
+					<br>
+					
+					<!-- INTUITIVENESS UX BRIEF -->
+					<h3>Intuitiveness</h3>
+					<p>&ensp;I have also tried to keep the functions of the website streamlined and easy to pick up, adhering to standard conventions used by other popular websites, such as drop-down menus indicated by arrows and the use of dots to change slides in the carousel.
+					</p>
+					<br>
+
 					<!-- READABILITY UX BRIEF -->
 					<h3>Readability</h3>
 					<p>&ensp;While discussing colour schemes with one of my teachers, Ms Musgrove, she pointed out that white text on a black background may be easier to read in some cases, such as where the reader suffers from a visual impairment or in poorly-lit environments. To account for this, I have added a "light switch" that toggles the primary colours of the website between light and dark using javascript, as exemplified below:
@@ -523,6 +622,13 @@
 					<p>The button queries all of the relevant elements in the page and changes their styles accordingly.
 					</p>
 					<br>
+
+					<!-- APPEARANCE UX BRIEF -->
+					<h3>Appearance</h3>
+					<p>&ensp;To give the website a more professional and visually appealing look, the borders that were initially used on the home and gallery page grid items were removed and replaced with box-shadows. I feel this made the website more pleasant to view as it removed the harsh colours and edges that were present before for a more natural feel.
+					</p>
+					<br>
+
 					<!-- TUTORIAL UX BRIEF -->
 					<h3>Tutorial</h3>
 					<p>&ensp;During implimentation, divs were used to create the indentations in code examples for the tutorial. It was discovered in testing that selecting text from the examples to be copied into an IDE would result in blocks of code without any indentation, making it hard for users to read and edit them.
@@ -535,30 +641,37 @@
 					<p>&ensp;As such, the "indent" divs were removed and replaced with spaces for each line. This allowed for better examples to be copied and had also made html easier to read and write as lines would be clearly defined by the number of space entities that preface them, rather than through a series of divs. The indent class was kept to keep comments in a block display with a left margin, while <b>&amp;nbsp;&amp;nbsp;</b> (one space x 2) was used instead of <b>&amp;ensp;</b> (two spaces) as java IDEs could not read the latter.
 					</p>
 					<div class="center">
-						<img src="./images/about/codeSpaces.png">
+						<img src="./images/about/codeIndents.png">
 						<br>
-						<span class="subtitle">Code examples written in html with spaces for indentation</span>
+						<span class="subtitle">Code example written with divs for indentation; somewhat difficult to conceptualise</span>
 					</div>
 					<p>&ensp;Once changes were made, coded examples were found to be working fine when compiled and run using an IDE.</p>
 					<br>
 
 					<!-- FEEDBACK UX BRIEF -->
 					<h3>Feedback</h3>
-					<p>I asked a few of my peers around school to test the website and gathered their opinions on any improvements that should be made. I also observed how they navigated the website to see if there were any changes that needed to be made to make it more intuitive.
+					<p>&ensp;I asked a few of my peers around school to test the website and gathered their opinions on any improvements that should be made. I also observed how they navigated the website to see if there were any changes that needed to be made to make it more intuitive.
 					</p>
-					<h4>Yuri</h4>
-					<p>&ensp;I showed the website to my schoolmate from the art department, Yuri, to gather some feedback on the website. She responded that the overall feel of the website was good, however more identity needed to be added to the index. Having made a portfolio herself, she said it was important that readers knew who the portfolio was for when they entered the website, and proposed I display my name and a picture of myself near the top of the page to quickly establish my identity.
-					</p>
-					<p>&ensp;A large banner was created for the website that would be placed directly after the carousel, while the "About" grid item was moved further up along the grid in response to her feedback. I feel that her comments were useful as they provide an insight from someone who works closely with portfolios as part of her education.
 					<h4>Alesia</h4>
 					<p>&ensp;The website was tested by my neighbour and media student, Alesia, and I observed that she was able to navigate the website succesfully, making use of most of the features available without direction. She did however, miss out on the "low light mode" button, and responded that it went unnoticed due to its size. Her feedback was positive, saying that she liked the layout and minimal design of the website, as well as highlighting a good use of colour throughout each page. She added that a brief description and instructions for the gallery may help users to better understand the page and why it was added.
 					</p>
 					<p>&ensp;The low light buttons were resized to make them more prominent and noticeable based on observation, while a description was added to the gallery in response to Alesia's feedback.
 					</p>
+					<h4>Yuri</h4>
+					<p>&ensp;I showed the website to my schoolmate from the art department, Yuri, to gather some feedback on the website. She responded that the overall feel of the website was good, however more identity needed to be added to the index. Having made a portfolio herself, she said it was important that readers knew who the portfolio was for when they entered the website, and proposed I display my name and a picture of myself near the top of the page to quickly establish my identity.
+					</p>
+					<div class="center">
+						<img src="./images/about/banner.png">
+						<br>
+						<span class="subtitle">The banner created for the home page</span>
+					</div>
+					<p>&ensp;A large banner was created for the website that would be placed directly after the carousel, while the "About" grid item was moved further up along the grid in response to her feedback. I feel that her comments were useful as they provide an insight from someone who works closely with portfolios as part of her education.
+					</p>
 					<h4>Ms Musgrove</h4>
 					<p>&ensp;Lastly, I approached my teacher, Ms Musgrove, for feedback on the design of the website. She mentioned that continuity should be added to the home page, as it seemed that there was no more content below the carousel. Ms Musgrove added that a brief description of the website should be present on the index to inform users of the purpose of the website, while the clickable area of the navigation links towards the bottom of the page should encompass the whole grid item, as it is standard practice by other websites.
 					</p>
-					<p>&ensp;The comments were taken into account, and a description was added below the banner to explain the website as well as add continuity to entice users to scroll down. The clickable area of the links were also increased to span entire items as seen on other websites such as codecademy.
+					<p>&ensp;The comments were taken into account, and a description was added below the banner to explain the website as well as add continuity to entice users to scroll down. The clickable area of the links were also increased to span entire items as seen on other websites such as <a href="https://www.codecademy.com/catalog/subject/web-development" target="_blank">Codecademy</a>.
+					</p>
 				</div>
 				
 				
@@ -577,9 +690,16 @@
 					</p>
 					<p>&ensp;When first attempting to create the contact page, I had set a min-height of main and based the grid's height on main by percentage. I was unable to achieve the desired result of the grid, a child element, being the same height as the parent without changing min-height to height, and could not understand why. 
 					</p>
+					<div class="center">
+						<img src="./images/about/flexHeight.png">
+						<br>
+						<span class="subtitle">Contact grid was not occupying all available space as intended</span>
+					</div>
 					<p>&ensp;After some experimenting, I discovered that the height of the child div was based solely on its content, meaning it had zero height by itself. I then decided to search for an explanation on the internet and was directed to the <a href="https://www.w3.org/TR/CSS2/visudet.html#Computing_heights_and_margins">w3 website</a>, which stated that the calculated height of a child element as a percentage of its parent will be zero if a definite height is not set. With this knowledge, I was able to approach the problem in a different way to solve the layout of the grid.
 					</p>
 					<p>&ensp;Another instance of this issue was seen in resizing the index page, where the carousel would change in size however the image would remain the same. I realised this was because I had set the height of the image to a percentage of a flex box, causing it would be ignored on resize. To solve this, I instead set the height relative to viewport (36vw &amp; 45vh) such that it would always be calculated and revalidated.
+					</p>
+					<p>&ensp;Through these challenges, I was able to learn the intricacies of designing websites in html and css, and feel more prepared to tackle problems with layout and element height in future. This also exposed me to the limitations of rendering in websites that developers have to grapple with to deliver consistent experiences for their users, something I did not expect when first starting the course.
 					</p>
 					<br>
 
@@ -587,7 +707,10 @@
 					<h3>Integration</h3>
 					<p>&ensp;Since the website was designed using an iterative model, some work needed to be done when fitting different parts together, as modules were developed individually and not always compatible with each other. This resulted in changes to javascript and css, since there were notable differences in functionality between different pages.
 					</p>
-					<p>&ensp;This was most apparent in integrating the filter and lightbox javascript for the gallery, which were both done separately from each other at different points along the development cycle. Many variables were reused between the two scripts, while arrays for filtering images and displaying them did not match. A large amount of reworking was needed to be done as a result, however frequent use of comments and clear indentation made the job much easier as I was able to understand how different variables and functions fit in the program.</p>
+					<p>&ensp;This was most apparent in integrating the filter and lightbox javascript for the gallery, which were both done separately from each other at different points along the development cycle. Many variables were reused between the two scripts, while arrays for filtering images and displaying them did not match. A large amount of reworking was needed to be done as a result, however frequent use of comments and clear indentation made the job much easier as I was able to understand how different variables and functions fit in the program.
+					</p>
+					<p>&ensp;Integration of the different parts of the website taught me the real significance of refactoring a project in software development, as sufficient time and effort needs to be put into making sure the different components of the website work together.
+					</p>
 					<br>
 
 					<!-- ROOT FONT CHALLENGE BRIEF -->
@@ -595,22 +718,32 @@
 					 <p>&ensp;I had set most of my design to be responsive based on pixels, sizing based on media queries on the screen size to change layouts. I had however, until reminded by my teacher, Ms Musgrove, forgotten that people often change root font sizes - especially on phones - to make reading easier. Upon testing my website with a different root font-size, the layout of the navbar was broken. To solve this, I went through the navbar css file and made all measurements absolute, such that the navbar would remain the same regardless of the root font, at a relatively large and readable font size of 24px.
 					 </p>
 					 <div class="center">
-						<img src="./images/brokenNav.png">
+						<img src="./images/about/brokenNav.png" style="border: 1px solid lightgray;">
 						<br>
 						<span class="subtitle">Screenshot of the gallery page with a root font-size set at 30px</span>
 					</div>
 					<p>&ensp;Grid content boxes in the home and gallery pages were also affected by the change in font-size, so the <i>rem</i> measurement was applied to the containers to account for extra space needed for larger fonts. The size of the image container remained the same for consistency.
 					</p>
 					<div class="center">
-						<img src="./images/newLargeFont.png">
+						<img src="./images/about/newLargeFont.png" style="border: 1px solid lightgray;">
 						<br>
 						<span class="subtitle">Screenshot of the gallery page with a root font-size set at 30px, post-modification</span>
 					</div>
 					<p>&ensp;I felt this was challenging as I had already completed the structure for all of the pages, and thus had to come up with a way to solve the problem without any major expense to the layout of the website. I first researched other websites to see how they tackled the issue, and to my surprise discovered some of the more popular social media sites ignored it altogether and kept all content fixed. I applied this to my navbar, setting fixed dimensions such that font size would not affect its layout. I then needed to think of a way to let the size of the image container stay the same while making the text container relative. Remembering the calc() function, I set the height of each grid item to the sum of the imageContainer's height in px and the remaining textContainer in rem to fix the sizing problem.
 					</p>
+					<p>&ensp;This highlighted the importance of a good design plan, as the redesign would not have been necessary if variable font sizes were accounted for before development. Although it is difficult to accommodate to every possibility, a good preventative measure would be to interview and observe wider demographics to see how they browse websites, such that different outcomes can be ruled out during the design process.
+					</p>
 					<br>
 				</div>
 				<!-- CHALLENGES FACED CHAPTER END -->
+
+				<!-- EVALUATION CHAPTER START -->
+				<a class="jump" id="id8">anchor</a>
+				<h2>8.Evaluation</h2>
+				<div class="post">
+				</div>
+				<!-- EVALUATION CHAPTER END -->
+				<span><a href="#top">Back to top</a></span>
 				
 
 

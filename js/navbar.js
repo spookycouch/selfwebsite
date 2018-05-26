@@ -10,14 +10,14 @@ function menuAppear()
 {
 	if(hamburgDown)
 	{
-		hamburgMenu.style.right = null;
+		hamburgMenu.style.transform = null;
 		hamburgDown = false;
 		screen.style.opacity = "0";
 		screen.style.visibility = "hidden";
 	}
 	else
 	{
-		hamburgMenu.style.right = "0px";
+		hamburgMenu.style.transform = "translateX(-100%)";
 		hamburgDown = true;
 		//screen appears
 		screen.style.opacity = "0.5";
@@ -32,6 +32,6 @@ screen.onmousedown = function()
 {
 	screen.style.opacity = "0";
 	screen.style.visibility = "hidden";
-	hamburgMenu.style.right = null;
+	hamburgMenu.style.transform = null;
 	hamburgDown = false;
 }

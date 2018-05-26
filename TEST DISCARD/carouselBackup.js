@@ -65,5 +65,5 @@ function setSlides()
 	else
 		slideCounter.textContent = (currentItem + 1) + "/" + maxSlides;
 	//carousel coordinates set to slideCoord value. transition set in css animates this movement
-	carousel.style.transform = "translateX(" + (slideCoord + "%") + ")";
+	carousel.style.left = (slideCoord + "%");
 }

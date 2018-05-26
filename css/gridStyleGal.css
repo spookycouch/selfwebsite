@@ -1,3 +1,4 @@
+/** main and grid setup **/
 main {
 	font-family: verdana, sans-serif;
 	color:lightgray;
@@ -23,8 +24,8 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	padding:50px 5%;
 	display:grid;
 	grid-template-columns: repeat(3,360px);
-	grid-template-rows: calc(360px + 7.5rem); /** 7.5rem for the text container **/
-	grid-auto-rows: calc(360px + 7.5rem); /** 7.5rem for the text container **/
+	grid-template-rows: calc(360px + 7.5rem); /** image fixed 360px and 7.5rem for the text container **/
+	grid-auto-rows: calc(360px + 7.5rem); /** image fixed 360px and 7.5rem for the text container **/
 	grid-row-gap: 50px;
 	justify-content:space-around;
 	background-color: #111;
@@ -38,28 +39,29 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	height:100%;
 	width:100%;
 	background-color: black;
+	box-shadow: 0 0 30px 1px #000;
 }
+/** images **/
 .imageContainer {
 	display: flex;
 	height:360px;
 	width:360px;
-	border: 1.5px solid gray; /** 1.5px used to prevent visual glitches at <1px level **/
 	cursor: pointer;
 }
 .imageContainer img, .imageContainer video, .imageContainer audio {
 	max-height:100%;
 	max-width:100%;
 	margin:auto;
+	align-self:center; /** for ms EDGE support **/
 }
+/** text **/
 .textContainer {
 	height: 7.5rem; /** 7.5rem for the text container **/
 	padding:0.5rem;
 	overflow:auto;
-	border: 1px solid gray;
 	border-top:none;
 	background-color: black;
 }
-/** text **/
 .textContainer h3 {
 	margin:0;
 	margin-bottom: 0.5rem;
@@ -94,6 +96,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	margin:auto;
 	margin-bottom:0;
 	visibility:visible;
+	align-self: center;
 }
 #modalText {
 	text-align: center;
@@ -136,9 +139,11 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	opacity: 1;
 }
 #prevImgBtn {
+	padding-right:8px;
 	left:15%;
 }
 #nextImgBtn {
+	padding-left:8px;
 	right:15%;
 }
 #exitButton {
@@ -260,10 +265,12 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	.imageContainer {
 		height:95vw; /** 95vw chosen to account for scrollbar **/
 		width:100%;
+		overflow:hidden;
 	}
 	.imageContainer img,.imageContainer video,.imageContainer audio {
-		max-height:100%;
-		max-width:100%; /** set to imageContainer width to revalidate image **/
+		align-self:center;
+		max-width:calc(100% + 5px); /** slight margin for overflow to fill screen **/
+		max-height:calc(100% + 5px); /** slight margin for overflow to fill container**/
 	}
 	.modalButton {
 		top:calc(50% - 0.5em);

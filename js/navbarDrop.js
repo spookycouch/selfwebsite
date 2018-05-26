@@ -15,14 +15,14 @@ function tocAppear()
 	{
 		arrow.textContent = '\u25bc';
 		tocBtn.style.background = null;
-		dropToc.style.top = null;
+		dropToc.style.transform = null;
 		dropTocDown = false;
 	}
 	else
 	{
 		arrow.textContent = '\u25b2';
 		tocBtn.style.background = "#2c9c91";
-		dropToc.style.top = "50px";
+		dropToc.style.transform = "translateY(50px)";
 		dropTocDown = true;
 	}
 }
@@ -40,19 +40,19 @@ function menuAppear()
 {
 	if(hamburgDown)
 	{
-		hamburgMenu.style.right = null;
+		hamburgMenu.style.transform = null;
 		hamburgDown = false;
 		screen.style.opacity = "0";
 		screen.style.visibility = "hidden";
 	}
 	else
 	{
-		hamburgMenu.style.right = "0px";
+		hamburgMenu.style.transform = "translateX(-100%)";
 		hamburgDown = true;
 		//close the table of contents when opened
 		arrow.textContent = '\u25bc';
 		tocBtn.style.background = null;
-		dropToc.style.top = null;
+		dropToc.style.transform = null;
 		dropTocDown = false;
 		//screen appears
 		screen.style.opacity = "0.5";
@@ -68,7 +68,7 @@ document.getElementsByTagName("main")[0].onmousedown = function()
 	//arrow direction is swapped
 	arrow.textContent = '\u25bc';
 	tocBtn.style.background = null;
-	dropToc.style.top = null;
+	dropToc.style.transform = null;
 	dropTocDown = false;
 	
 };
@@ -77,6 +77,6 @@ screen.onmousedown = function()
 {
 	screen.style.opacity = "0";
 	screen.style.visibility = "hidden";
-	hamburgMenu.style.right = null;
+	hamburgMenu.style.transform = null;
 	hamburgDown = false;
 }

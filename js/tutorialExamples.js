@@ -36,6 +36,11 @@ btnRight.onmouseup = function(){ rightSpeed = 0; };
 btnLeft.onmouseleave = function(){ leftSpeed = 0; };
 btnRight.onmouseleave = function(){ rightSpeed = 0; };
 document.getElementById("buttonReset").onmousedown = function(){ playerx= 300; };
+//chapter 4 touch-inputs for speed 
+btnLeft.ontouchstart = function(){ leftSpeed = -10};
+btnRight.ontouchstart = function(){ rightSpeed = 10; };
+btnLeft.ontouchend = function(){ leftSpeed = 0; };
+btnRight.ontouchend = function(){ rightSpeed = 0; };
 
 //chapter 4 & 5 player
 var playerx = 300;
@@ -75,6 +80,11 @@ btnLeft2.onmouseleave = function(){ leftSpeed = 0; };
 btnRight2.onmouseleave = function(){ rightSpeed = 0; };
 document.getElementById("buttonReset2").onmousedown = function(){ resetChap5(); };
 document.getElementById("buttonStart2").onmousedown = function(){ if(!start || dead) { resetChap5(); start = true; } };
+//chapter 5 touch-inputs for speed
+btnLeft2.ontouchstart = function(){ leftSpeed = -10};
+btnRight2.ontouchstart = function(){ rightSpeed = 10; };
+btnLeft2.ontouchend = function(){ leftSpeed = 0; };
+btnRight2.ontouchend = function(){ rightSpeed = 0; };
 
 //chapters 4 & 5 event listener for keyboard-input
 window.addEventListener('keydown', function(event)

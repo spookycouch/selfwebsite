@@ -37,6 +37,8 @@ main img {
 }
 main a {
 	color:#3380B3;
+	text-decoration:none;
+	font-weight:bold;
 }
 .titleCard {
 	text-align:center;
@@ -46,6 +48,7 @@ main a {
 	padding-left:1.5rem;
 }
 .tableOfContents li a {
+	font-weight:normal;
 	text-decoration: none;
 }
 canvas {
@@ -74,6 +77,7 @@ canvas {
 	bottom:2rem;
 }
 .lights {
+	cursor:pointer;
 	margin-left:1.5rem;
 	color:white;
 	background-color: #2c9c91;
