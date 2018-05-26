@@ -269,8 +269,8 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	}
 	.imageContainer img,.imageContainer video,.imageContainer audio {
 		align-self:center;
-		max-width:calc(100% + 5px); /** slight margin for overflow to fill screen **/
-		max-height:calc(100% + 5px); /** slight margin for overflow to fill container**/
+		max-width:100vw; /** slight margin for overflow to fill screen **/
+		max-height:100vw; /** slight margin for overflow to fill container**/
 	}
 	.modalButton {
 		top:calc(50% - 0.5em);
