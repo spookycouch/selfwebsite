@@ -62,7 +62,7 @@ canvas {
 	vertical-align: top;
 	display:inline-block;
 	border:1px solid lightgray;
-	border-bottom:1px solid lightgray;
+	overflow:hidden;
 }
 .center {
 	text-align:center;
