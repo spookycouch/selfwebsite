@@ -139,11 +139,11 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	opacity: 1;
 }
 #prevImgBtn {
-	padding-right:8px;
+	padding: 0 8px;
 	left:15%;
 }
 #nextImgBtn {
-	padding-left:8px;
+	padding: 0 8px;
 	right:15%;
 }
 #exitButton {
