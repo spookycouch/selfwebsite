@@ -40,6 +40,9 @@ main a {
 	text-decoration:none;
 	font-weight:bold;
 }
+main button {
+	user-select: none;
+}
 .titleCard {
 	text-align:center;
 }
@@ -61,8 +64,7 @@ canvas {
 .canvasWrapper {
 	vertical-align: top;
 	display:inline-block;
-	border:1px solid lightgray;
-	overflow:hidden;
+	outline:1px solid lightgray;
 }
 .center {
 	text-align:center;
