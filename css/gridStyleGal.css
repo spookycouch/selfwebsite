@@ -4,7 +4,7 @@ main {
 	color:lightgray;
 	min-height:calc(100% - 100px); /** -100px to account for the footer **/
 	padding-top: 50px; /** margin for navbar **/
-	background-color: #111;
+	background-color: #141414;
 }
 main, .grid, .gridItem, .imageContainer, .textContainer {
 	box-sizing: border-box;
@@ -28,7 +28,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	grid-auto-rows: calc(360px + 7.5rem); /** image fixed 360px and 7.5rem for the text container **/
 	grid-row-gap: 50px;
 	justify-content:space-around;
-	background-color: #111;
+	background-color: #141414;
 	min-height:100%;
 }
 
@@ -129,7 +129,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	z-index:10;
 	cursor: pointer;
 	font-weight: bold;
-	font-size: 64px;
+	font-size: 100px;
 	color: rgb(255,255,255);
 	opacity: 0.5;
 	transition: opacity 0.4s ease-out;
@@ -195,12 +195,13 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	}
 	.modalButton {
 		top:calc(50% - 0.5em);
-		font-size: 3rem;
+		font-size: 64px;
 	}
 	#prevImgBtn, #nextImgBtn {
 		background-color:gray;
 		border-radius: 4px;
 		opacity: 0.1;
+		padding-bottom:4px;
 	}
 	#prevImgBtn:hover, #nextImgBtn:hover {
 		opacity: 0.5;
@@ -259,11 +260,11 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 		padding:50px 0;
 		padding-top:30px;
 		grid-template-columns: 100%; /** 1-column grid, screen-width **/
-		grid-template-rows: calc(95vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
-		grid-auto-rows: calc(95vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
+		grid-template-rows: calc(100vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
+		grid-auto-rows: calc(100vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
 	}
 	.imageContainer {
-		height:95vw; /** 95vw chosen to account for scrollbar **/
+		height:100vw; /** 95vw chosen to account for scrollbar **/
 		width:100%;
 		overflow:hidden;
 	}
@@ -274,11 +275,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	}
 	.modalButton {
 		top:calc(50% - 0.5em);
-		font-size: 2rem;
-	}
-	#exitButton {
-		font-size:4rem;
-		right:1rem;
+		font-size: 48px;
 	}
 	#modalItems {
 		width:100%;

@@ -1,3 +1,7 @@
+/**
+*** Jeffcock web project
+*** js written May 2018
+**/
 //CAROUSEL. maximum slides is set to the number of buttons
 //To change no. of slides, a new button must be added in .carouselButtons in html, with a new onmousedown function set below
 //defaults and setup

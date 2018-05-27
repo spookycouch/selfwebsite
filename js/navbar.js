@@ -1,3 +1,7 @@
+/**
+*** Jeffcock web project
+*** js written April 2018
+**/
 //variables for hamburger menu
 var hamburgMenu = document.getElementById("navButtons");
 var screen = document.getElementById("screen");
@@ -8,6 +12,7 @@ document.getElementById("hamburger2").onclick = menuAppear;
 //function for hamburger menu, similar to TOC function above
 function menuAppear()
 {
+	//if menu is out, return to default. otherwise appear from right side of screen
 	if(hamburgDown)
 	{
 		hamburgMenu.style.transform = null;
@@ -19,7 +24,7 @@ function menuAppear()
 	{
 		hamburgMenu.style.transform = "translateX(-100%)";
 		hamburgDown = true;
-		//screen appears
+		//dark screen appears
 		screen.style.opacity = "0.5";
 		screen.style.visibility = "visible";
 	}

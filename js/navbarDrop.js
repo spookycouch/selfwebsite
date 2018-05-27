@@ -1,3 +1,7 @@
+/**
+*** Jeffcock web project
+*** js written May 2018
+**/
 //variables for table of contents menu
 var tocBtn = document.getElementById("tocButton");
 var dropToc = document.getElementById("dropToc");
@@ -54,7 +58,7 @@ function menuAppear()
 		tocBtn.style.background = null;
 		dropToc.style.transform = null;
 		dropTocDown = false;
-		//screen appears
+		//dark screen appears
 		screen.style.opacity = "0.5";
 		screen.style.visibility = "visible";
 	}

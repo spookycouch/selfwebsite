@@ -1,3 +1,7 @@
+/**
+*** Jeffcock web project
+*** js written April 2018
+**/
 //Tutorial Examples. Javascript closely resembles Java code in tutorial for any in-depth explanations.
 //Comments used for sectorisation and highlighting any specific differences in code
 //SETUP

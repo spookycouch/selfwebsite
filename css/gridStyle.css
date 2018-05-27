@@ -4,7 +4,7 @@ main {
 	color:#daf1ee; /** #ecf8f6 also good **/
 	min-height:100%;
 	padding-top: 50px; /** margin for navbar **/
-	background-color: #111;
+	background-color: #141414;
 }
 main, .grid, .gridItem, .imageContainer, .textContainer {
 	box-sizing: border-box;
@@ -27,7 +27,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	grid-auto-rows: calc(360px + 7.5rem);
 	grid-row-gap: 50px;
 	justify-content:space-around;
-	background-color: #111;	/** #081720 is also good **/
+	background-color: #141414;	/** #081720 is also good **/
 	min-height:100%;
 }
 
@@ -47,7 +47,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	height:360px;
 	width:360px;
 }
-.imageContainer img,.imageContainer video,.imageContainer audio {
+.imageContainer img {
 	max-height:100%;
 	max-width:100%;
 	margin:auto;
@@ -144,21 +144,22 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	}
 	.grid {
 		padding:50px 0;
+		padding-top:30px;
 		grid-template-columns: 100%; /** 1-column grid, screen-width **/
-		grid-template-rows: calc(95vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
-		grid-auto-rows: calc(95vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
+		grid-template-rows: calc(100vw + 7.5rem); /** 100 viewport width for image height **/
+		grid-auto-rows: calc(100vw + 7.5rem);
 	}
 	.gridItem {
 		background-color: #000;
 	}
 	.imageContainer {
-		height:95vw; /** 95vw chosen to account for scrollbar **/
+		height:100vw;
 		width:100%;
 		overflow:hidden;
 	}
 	.imageContainer img,.imageContainer video,.imageContainer audio {
 		align-self:center;
-		max-width:100vw; /** slight margin for overflow to fill screen **/
-		max-height:100vw; /** slight margin for overflow to fill container**/
+		max-width:100vw; /** 100 viewport width to fill screen **/
+		max-height:100vw;
 	}
 }

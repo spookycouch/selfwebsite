@@ -41,7 +41,9 @@ th,td {
 	border: 1px solid gray;
 	padding:4px;
 }
-.tableHeadings { background-color: lightgray; }
+.tableHeadings { 
+	background-color: lightgray; 
+}
 @media only screen and (max-width: 800px)
 {
 	.colorScheme {

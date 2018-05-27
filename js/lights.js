@@ -1,3 +1,7 @@
+/**
+*** Jeffcock web project
+*** js written May 2018
+**/
 //initial setup; get items from page.
 var lightsOn = true;
 var lightBorders = document.getElementsByClassName("lightBorder");

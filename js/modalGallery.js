@@ -1,3 +1,7 @@
+/**
+*** Jeffcock web project
+*** js written April 2018
+**/
 //FILTERS. To add filter, add new class="filterCheck" to html, and a string of [category name] to array "catNames" below in the same order of appearance.
 var allItems = document.getElementsByClassName("gridItem");
 var videos = document.getElementsByTagName("video");
