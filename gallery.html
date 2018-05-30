@@ -5,20 +5,21 @@
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 		<title>spookycouch | Gallery</title>
 		<link href="./assets/spookycouch.png" rel="shortcut icon" type="image/png">
+		<!-- css -->
 		<link href="./css/navbar.css" type="text/css" rel="stylesheet">
 		<link href="./css/gridStyleGal.css" type="text/css" rel="stylesheet">
 	</head>
 	<body>
-		<!-- modal image; occupies full screen when grid items are clicked on. consists of media and buttons -->
+		<!-- modal image; occupies full screen when grid items are clicked on. consists of media, text and buttons -->
 		<div id="modal">
 			<span id="imageCounter"></span>
 			<span id="prevImgBtn" class="modalButton"> &#8249;&#xfe0e;</span>
 			<div id="closeModal"></div>
 			<span id="exitButton" class="modalButton">&times;</span>
 			<div id="modalItems">
-					<img id="modalImage" src="./images/gallery/lighthouse.jpg">
-					<video id="modalVideo" controls></video>
-					<audio id="modalAudio" controls></audio>
+					<img id="modalImage" src="./images/gallery/lighthouse.jpg"  alt="Modal Image">
+					<video id="modalVideo" controls>Video not supported</video>
+					<audio id="modalAudio" controls>Audio not supported</audio>
 					<div id="modalText">
 						<h4>Hello</h4>
 						<span>Hello</span>
@@ -31,7 +32,7 @@
 		<nav>
 			<div class="navForeground">
 				<!-- logo -->
-				<h1>	<a href="./index.html">spookycouch <img class="couchLogo specialCouch" src="./assets/spookycouch.png" height="24px" width="24px"></a>	</h1>
+				<h1>	<a href="./index.html">spookycouch <img class="couchLogo specialCouch" src="./assets/spookycouch.png" height="24px" width="24px" alt="logo"></a>	</h1>
 				<!-- hamburger/drop-down menu buttons -->
 				<ul class="menuItem">
 					<li id="tocButton">Filters <span id="arrow">&#9660;</span>	</li>	
@@ -70,7 +71,7 @@
 		</nav>
 
 
-		<!-- main content -->
+		<!-- START OF MAIN CONTENT -->
 		<main>
 
 			<div class="banner">
@@ -80,12 +81,12 @@
 			</div>
 
 			<div class="grid">
-			<!-- GRID - additions to the grid must be in the form of a "gridItem" with a second class representing the category of the content
-				gridItems will contain an imageContainer - with an img, video or audio - and a textContainer with a subtitle -->
+			<!-- GRID - additions to the grid must be in the form of a "gridItem" with a second class representing the category of the content.
+				gridItems will contain an imageContainer - with an img, video or audio - and a textContainer with a subtitle. spacing left for visibility -->
 
 
 				<div class="gridItem gameDesign">
-					<div class="imageContainer"><img src="./images/gallery/bedroom.png"></div>
+					<div class="imageContainer"><img src="./images/gallery/bedroom.png" alt="8-bit Bedroom"></div>
 					<div class="textContainer">
 						<h3>Bedroom</h3>
 						<span>Art for scene 1 of a gamemaker project about work, 2017</span>
@@ -103,7 +104,7 @@
 
 
 				<div class="gridItem art">
-					<div class="imageContainer"><img src="./images/gallery/child.png"></div>
+					<div class="imageContainer"><img src="./images/gallery/child.png" alt="Drawing of child"></div>
 					<div class="textContainer">
 						<h3>Child</h3>
 						<span>Drawing inspired by childhood, 2017</span>
@@ -112,7 +113,7 @@
 
 
 				<div class="gridItem art">
-					<div class="imageContainer"><img src="./images/gallery/lighthouse.jpg"></div>
+					<div class="imageContainer"><img src="./images/gallery/lighthouse.jpg" alt="Lighthouse drawing"></div>
 					<div class="textContainer">
 						<h3>Lighthouse</h3>
 						<span>Illustration of a bird house, 2016</span>
@@ -121,7 +122,7 @@
 
 
 				<div class="gridItem art">
-					<div class="imageContainer"><img src="./images/gallery/ggrass2.png"></div>
+					<div class="imageContainer"><img src="./images/gallery/ggrass2.png" alt="Still from Green Grass"></div>
 					<div class="textContainer">
 						<h3>Green Grass</h3>
 						<span>Still from a cartoon about inequality, 2016</span>
@@ -129,7 +130,7 @@
 				</div>
 
 				<div class="gridItem gameDesign">
-					<div class="imageContainer"><img src="./images/gallery/game.png"></div>
+					<div class="imageContainer"><img src="./images/gallery/game.png" alt="Screenshot of video game"></div>
 					<div class="textContainer">
 						<h3>Java Shooter</h3>
 						<span>Screenshot of a game I made in Java during foundation, 2018</span>
@@ -138,9 +139,9 @@
 
 
 				<div class="gridItem music">
-					<div class="imageContainer"><audio src="./assets/broadcast.wav" type="audio/wav" controls>Audio not supported</audio></div>
+					<div class="imageContainer"><audio src="./assets/broadcast.mp3" type="audio/mp3" controls>Audio not supported</audio></div>
 					<div class="textContainer">
-						<h3>Broadcast.wav</h3>
+						<h3>Broadcast.mp3</h3>
 						<span>Michael A Grammar by Broadcast made on SonicPi, 2018</span>
 					</div>
 				</div>
@@ -156,7 +157,7 @@
 
 
 				<div class="gridItem art">
-					<div class="imageContainer"><img src="./images/gallery/soul.jpg"></div>
+					<div class="imageContainer"><img src="./images/gallery/soul.jpg" alt="Landscape art"></div>
 					<div class="textContainer">
 						<h3>Kevin's Soul</h3>
 						<span>Background for a cartoon about inner being, 2014</span>
@@ -167,12 +168,15 @@
 			</div>
 			
 		</main>
+		<!-- END OF MAIN CONTENT -->
 		
+		<!-- FOOTER -->
 		<footer>
 			<div class="left"><a href="https://www.bellerbys.com/find-your-course/foundation/foundation-computing" target="_blank">Bellerbys Computing Foundation</a></div>
 			<div class="middle"><span>Created by Joe Jeffcock 2018</span></div>
 			<div class="right"><span>Social Media: </span></div>
 			<div class="socialMedia">
+				<!-- links to social media -->
 				<ul>
 					<li><a href="https://www.facebook.com/bellerbyscollege/" target="_blank"><img src="./assets/facebook.png" alt="facebook"></a></li>
 					<li><a href="https://www.instagram.com/bellerbys_college" target="_blank"><img src="./assets/instagram.png" alt="instagram"></a></li>

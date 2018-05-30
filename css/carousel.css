@@ -78,6 +78,8 @@
 	color:gray;
 }
 /** MEDIA QUERIES - change size of carousel depending on orientation **/
+
+/** Landscape Screens **/
 @media only screen and (orientation:landscape)
 {
 	.carousel {
@@ -87,6 +89,7 @@
 		height:calc(36vw - 3rem); /** manually set to 90%-3rem; as height of itemImage is ignored **/
 	}
 }
+/** Portrait Screens **/
 @media only screen and (orientation:portrait)
 {
 	.carousel {
@@ -96,6 +99,7 @@
 		height:calc(45vh - 3rem); /** manually set to 90%-3rem; as height of itemImage is ignored **/
 	}
 }
+/** Tablets **/
 @media only screen and (max-width:860px)
 {
 	.itemImage h2 {
@@ -120,6 +124,7 @@
 		transition: transform 3s ease-in-out;
 	}
 }
+/** Phone and Tablet **/
 @media only screen and (max-width:600px) , (orientation:portrait)
 {
 	.itemImage span {
@@ -139,6 +144,7 @@
 		font-size:10px;
 	}
 }
+/** Phones **/
 @media only screen and (max-width:400px)
 {
 	.carousel {

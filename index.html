@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 		<title>spookycouch</title>
 		<link href="./assets/spookycouch.png" rel="shortcut icon" type="image/png">
+		<!-- css -->
 		<link href="./css/navbar.css" type="text/css" rel="stylesheet">
 		<link href="./css/carousel.css" type="text/css" rel="stylesheet">
 		<link href="./css/gridStyle.css" type="text/css" rel="stylesheet">
@@ -16,7 +17,7 @@
 		<nav>
 			<div class="navForeground">
 				<!-- logo -->
-				<h1>	<a href="./index.html">spookycouch <img class="couchLogo" src="./assets/spookycouch.png" height="24px" width="24px"></a>	</h1>
+				<h1>	<a href="./index.html">spookycouch <img class="couchLogo" src="./assets/spookycouch.png" height="24px" width="24px" alt="logo"></a>	</h1>
 				<!-- hamburger menu button -->
 				<ul class="menuItem">
 					<li id="hamburger">	&#9776;</li>
@@ -31,13 +32,13 @@
 					<li>	<a href="./contact.html">Contact</a> </li>
 				</ul>
 				<!-- hamburger menu dark screen -->
-				<div id="screen"></div>
+				<div id="screen" style="visibility:hidden;"></div> <!-- style inline so it renders immediately -->
 			</div>
 		</nav>
 		<!-- NAVIGATION BAR -->
 
 
-
+		<!-- START OF MAIN CONTENT -->
 		<main>
 			<!-- CAROUSEL. new carousel items are divs of class "carouselItem", containing a div "itemImage" with a h2, and an img wrapped in a link -->
 			<div class = "carousel">
@@ -78,8 +79,8 @@
 							<br>
 							<a href="./gallery.html"><img src="./images/index/ggrass2.png"></a>
 						</div>	
-
 					</div>
+
 				</div>
 				
 				<!-- carousel buttons to go to slides -->
@@ -96,9 +97,10 @@
 				<p>A collection of my work in digital and interactive media</p>
 			</div>
 
-			<!-- GRID. New grid items to follow the format below; div of class "gridItem" containing a link, an "imageContainer" and a "textContainer" 
-				imageContainer consists of an img, while textContainer contains a h3 title and a span for descriptions-->
 			<div class="grid">
+			<!-- GRID - New grid items to follow the format below; div of class "gridItem" containing a link, an "imageContainer" and a "textContainer" 
+				imageContainer consists of an img, while textContainer contains a h3 title and a span for descriptions. spacing left for visibility-->
+
 
 				<div class="gridItem">
 					<a href="./gallery.html"></a>
@@ -111,6 +113,7 @@
 					</div>
 				</div>
 
+
 				<div class="gridItem">
 					<a href="./about.html"></a>
 					<div class="imageContainer">
@@ -121,6 +124,7 @@
 						<span>An insight on the creative process behind this web page</span>
 					</div>
 				</div>
+
 
 				<div class="gridItem">
 					<a href="./tutorial.html"></a>
@@ -133,6 +137,7 @@
 					</div>
 				</div>
 
+
 				<div class="gridItem">
 					<a href="https://www.etsy.com" target="_blank"></a>
 					<div class="imageContainer">
@@ -143,6 +148,7 @@
 						<span>Visit our store at [expunged for legal reasons] and rock the couch logo</span>
 					</div>
 				</div>
+
 
 				<div class="gridItem">
 					<a href="./contact.html"></a>
@@ -155,15 +161,18 @@
 					</div>
 				</div>
 
+
 			</div>
-
 		</main>
+		<!-- END OF MAIN CONTENT -->
 
+		<!-- FOOTER -->
 		<footer>
 			<div class="left"><a href="https://www.bellerbys.com/find-your-course/foundation/foundation-computing" target="_blank">Bellerbys Computing Foundation</a></div>
 			<div class="middle"><span>Created by Joe Jeffcock 2018</span></div>
 			<div class="right"><span>Social Media: </span></div>
 			<div class="socialMedia">
+				<!-- links to social media -->
 				<ul>
 					<li><a href="https://www.facebook.com/bellerbyscollege/" target="_blank"><img src="./assets/facebook.png" alt="facebook"></a></li>
 					<li><a href="https://www.instagram.com/bellerbys_college" target="_blank"><img src="./assets/instagram.png" alt="instagram"></a></li>

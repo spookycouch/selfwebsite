@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 		<title>spookycouch | Tutorials</title>
 		<link href="./assets/spookycouch.png" rel="shortcut icon" type="image/png">
+		<!-- css -->
 		<link href="./css/blogStyle.css" type="text/css" rel="stylesheet">
 		<link href="./css/code.css" type="text/css" rel="stylesheet">
 		<link href="./css/navbar.css" type="text/css" rel="stylesheet">
@@ -16,7 +17,7 @@
 			
 			<div class="navForeground">
 				<!-- logo -->
-				<h1>	<a href="./index.html">spookycouch <img class="couchLogo specialCouch" src="./assets/spookycouch.png" height="24px" width="24px"></a>	</h1>
+				<h1>	<a href="./index.html">spookycouch <img class="couchLogo specialCouch" src="./assets/spookycouch.png" height="24px" width="24px" alt="logo"></a>	</h1>
 				<!-- hamburger/drop-down menu buttons -->
 				<ul class="menuItem">
 					<li id="tocButton">Contents <span id="arrow">&#9660;</span>	</li>	
@@ -32,11 +33,11 @@
 					<li>	<a href="./contact.html">Contact</a> </li>
 				</ul>
 				<!-- hamburger menu dark screen -->
-				<div id="screen"></div>
+				<div id="screen" style="visibility:hidden;"></div> <!-- style inline so it renders immediately -->
 			</div>
 
 			<!-- Drop-down menu -->
-			<div id="dropToc">
+			<div id="dropToc" style="transform: translateY(-100%);"> <!-- style inline so it renders immediately -->
 				<ul>
 					<li>	<a href="#id0">Introduction</a>	</li>	
 					<li>	<a href="#id0.5">0.5. Loading and Saving</a>	</li>
@@ -58,7 +59,7 @@
 		<main>
 			<!-- White borders start here -->
 			<div class= "blog #top">
-				
+				<!-- TITLE AND TABLE OF CONTENTS -->
 				<div class="titleCard">
 						<h1>Java Game Dev Tutorial</h1>
 						<span class="snippet">public static void main (String [] args){}</span>
@@ -79,6 +80,8 @@
 					<button type="button" class="lights" onclick="triggerLights();">Low-light mode: off</button>
 				</div>
 
+
+				<!-- INTRODUCTION -->
 				<a class="jump" id="id0">anchor</a>
 				<h2>Introduction: Getting Fancy with Java</h2>
 				<div class="post">				
@@ -111,7 +114,7 @@
 
 
 
-
+				<!-- CHAPTER 0.5 -->
 				<a class="jump" id="id0.5">anchor</a>
 				<h2>0.5.Loading and Saving "the Game"</h2>
 				<div class ="post">
@@ -170,7 +173,7 @@
 					<p>&ensp;Once this is done, its simply a case of creating an instance of the writer and running the write method with a String of your choice. Here's the result of one I did with the words "hello".</p>
 
 					<div class="center">
-						<img src="./images/tutorial/saveData.png">
+						<img src="./images/tutorial/saveData.png" alt="screenshot of write function">
 					</div>
 
 					<p>&ensp;The code for a File Reader is very much the same, except it returns a String instead of taking in an argument of one. Let's make a new class of Reader in the same project to see if the writer worked.</p>
@@ -218,7 +221,7 @@
 					
 					<p>&ensp;Reading the file you've written earlier, you should get something like this:</p>
 					<div class="center">
-						<img src="./images/tutorial/saveDataRead.png">
+						<img src="./images/tutorial/saveDataRead.png" alt="screenshot of read function">
 					</div>
 				</div>
 
@@ -230,7 +233,7 @@
 
 
 
-
+				<!-- CHAPTER 1 -->
 				<a class="jump" id="id1">anchor</a>
 				<h2>1.Creating Gooeys (GUIs)</h2>
 				<div class="post">
@@ -288,7 +291,7 @@
 					<!-- Code example -->
 
 					<div class="center">
-						<img class="lightBorder" src="./images/tutorial/button.png">
+						<img class="lightBorder" src="./images/tutorial/button.png" alt="screenshot of GUI">
 					</div>
 
 					<p>&ensp;Now if you'll notice, the button takes up the entirity of the screen. This shows how swing containers work, as swing objects take up the full width of their parents when added without a layout.</p>
@@ -300,7 +303,7 @@
 
 
 
-				
+				<!-- CHAPTER 2 -->
 				<a class="jump" id="id2">anchor</a>
 				<h2>2.Drawing with said Gooeys</h2>
 				<div class="post">
@@ -351,7 +354,7 @@
 					than itself; with enough of these shapes, we have the power to form images more complex than its individual parts. <i><b>Emergence!</b></i></p>
 
 					<div class="center">
-						<div class="canvasWrapper"><canvas id="canvas2" width="640px" height="480px"></canvas></div>
+						<canvas id="canvas2" width="640px" height="480px"></canvas>
 					</div>
 				</div>
 
@@ -359,7 +362,7 @@
 
 
 
-
+				<!-- CHAPTER 3 -->
 				<a class="jump" id="id3">anchor</a>
 				<h2>3.The Gooey, it moves!</h2>
 				<div class="post">					
@@ -424,7 +427,7 @@
 					<!-- Code example -->
 
 					<div class="center">
-						<div class="canvasWrapper"><canvas id="canvas3" width="640px" height="480px"></canvas></div>
+						<canvas id="canvas3" width="640px" height="480px"></canvas>
 					</div>
 
 					<br>
@@ -449,8 +452,7 @@
 
 
 
-
-
+				<!-- CHAPTER 4 -->
 				<a class="jump" id="id4">anchor</a>
 				<h2>4.Making the Gooey do stuff</h2>
 				<div class="post">
@@ -545,12 +547,12 @@
 
 					<div class="center">
 						<h3><u>Use the arrow keys or press the buttons to move</u></h3>
-						<div class="canvasWrapper"><canvas id="canvas4" width="640px" height ="480px"></canvas></div>
+						<canvas id="canvas4" width="640px" height ="480px"></canvas>
 						<br>
 						<br>
-						<button id="buttonLeft" style="width:40px; height:40px">&larr;</button>
-						<button id="buttonRight" style="width:40px; height:40px;">&rarr;</button>
-						<button id="buttonReset" style="height:40px;">Reset</button>
+						<button id="buttonLeft" style="width:40px; height:40px">&larr;</button><!-- prevent white space 
+					 --><button id="buttonRight" style="width:40px; height:40px;">&rarr;</button><!-- prevent white space 
+					 --><button id="buttonReset" style="height:40px;">Reset</button>
 					</div>
 
 					<p>&ensp;Congratulations, we now have a game! Technically. With player input down, it is just a case of adding more methods and hit detection to make gameplay a reality.</p>
@@ -562,7 +564,7 @@
 
 
 
-				
+				<!-- CHAPTER 5 -->
 				<a class="jump" id="id5">anchor</a>
 				<h2>5.Enemies &amp; Hit Detection</h2>
 				<div class="post">
@@ -672,13 +674,13 @@
 
 					<div class="center">
 						<h3><u>Use the arrow keys or press the buttons to move</u></h3>
-						<div class="canvasWrapper"><canvas id="canvas5" width="640px" height ="480px"></canvas></div>
+						<canvas id="canvas5" width="640px" height ="480px"></canvas>
 						<br>
 						<br>
-						<button id="buttonLeft2" style="width:40px; height:40px">&larr;</button>
-						<button id="buttonRight2" style="width:40px; height:40px;">&rarr;</button>
-						<button id="buttonStart2" style="height:40px;">Start</button>
-						<button id="buttonReset2" style="height:40px;">Reset</button>
+						<button id="buttonLeft2" style="width:40px; height:40px">&larr;</button><!-- prevent white space 
+					 --><button id="buttonRight2" style="width:40px; height:40px;">&rarr;</button><!-- prevent white space 
+					 --><button id="buttonStart2" style="height:40px;">Start</button><!-- prevent white space 
+					 --><button id="buttonReset2" style="height:40px;">Reset</button>
 					</div>
 
 					<p>&ensp;As shown in the example, hit detection between game objects is simply done through a series of calculations to check if their coordinates are intersecting at any point. Calculations can be expanded to include barriers, projectiles and pick-ups to increase the scope of the game. Intricate animations could also be played by cycling through different coordinates or drawings in an array each time the timer goes off, possibly through a new paint function like <b>paintEnemy(Graphics2D g2d)</b>.
@@ -707,11 +709,14 @@
 			<!-- White borders end here -->
 		</main>
 		<!-- END OF MAIN CONTENT -->
+
+		<!-- FOOTER -->
 		<footer>
 			<div class="left"><a href="https://www.bellerbys.com/find-your-course/foundation/foundation-computing" target="_blank">Bellerbys Computing Foundation</a></div>
 			<div class="middle"><span>Created by Joe Jeffcock 2018</span></div>
 			<div class="right"><span>Social Media: </span></div>
 			<div class="socialMedia">
+				<!-- links to social media -->
 				<ul>
 					<li><a href="https://www.facebook.com/bellerbyscollege/" target="_blank"><img src="./assets/facebook.png" alt="facebook"></a></li>
 					<li><a href="https://www.instagram.com/bellerbys_college" target="_blank"><img src="./assets/instagram.png" alt="instagram"></a></li>

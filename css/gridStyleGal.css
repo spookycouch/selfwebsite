@@ -23,7 +23,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 	width:100%;
 	padding:50px 5%;
 	display:grid;
-	grid-template-columns: repeat(3,360px);
+	grid-template-columns: repeat(3,360px); /** 3-column grid **/
 	grid-template-rows: calc(360px + 7.5rem); /** image fixed 360px and 7.5rem for the text container **/
 	grid-auto-rows: calc(360px + 7.5rem); /** image fixed 360px and 7.5rem for the text container **/
 	grid-row-gap: 50px;
@@ -168,7 +168,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 		font-size:14px;
 	}
 	.grid {
-		grid-template-columns: repeat(2,360px);
+		grid-template-columns: repeat(2,360px); /** 2-column grid **/
 	}
 	#prevImgBtn {
 		left:10%;
@@ -218,7 +218,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 @media only screen and (max-width:860px)  and (min-width:421px) and (orientation:portrait)
 {
 	.grid {
-		grid-template-columns: 360px;
+		grid-template-columns: 360px; /** 1-column grid **/
 	}
 	#modalItems {
 		width:100%;
@@ -229,7 +229,7 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 @media only screen and (max-width:860px) and (min-width:421px) and (orientation:landscape) , (max-height:500px) and (orientation:landscape)
 {
 	.grid {
-		grid-template-columns: 400px;
+		grid-template-columns: 400px; /** 1-column grid **/
 		grid-template-rows: calc(225px + 6rem);
 		grid-auto-rows: calc(225px + 6rem);
 	}
@@ -260,8 +260,8 @@ main, .grid, .gridItem, .imageContainer, .textContainer {
 		padding:50px 0;
 		padding-top:30px;
 		grid-template-columns: 100%; /** 1-column grid, screen-width **/
-		grid-template-rows: calc(100vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
-		grid-auto-rows: calc(100vw + 7.5rem);  /** 95vw chosen to account for scrollbar **/
+		grid-template-rows: calc(100vw + 7.5rem); /** 100 viewport width for image height **/
+		grid-auto-rows: calc(100vw + 7.5rem);
 	}
 	.imageContainer {
 		height:100vw; /** 95vw chosen to account for scrollbar **/

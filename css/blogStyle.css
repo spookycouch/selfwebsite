@@ -1,20 +1,21 @@
+/** setup html, body and main **/
 html, body {
 	font-family: verdana, sans-serif;
 	color: #222;
 }
-
-/** Borders around main **/
 main {
 	width: 100%;
 	min-height:calc(100% - 100px);
 	background-color:#EEE;
 }
+/** headers **/
 h2 {
 	margin-bottom: 1rem;
 }
 h4 {
 	text-decoration: underline;
 }
+/** blog - white borders - and posts**/
 .blog {
 	box-sizing:border-box;
 	width:1000px;
@@ -28,6 +29,7 @@ h4 {
 .post:not(.tableOfContents) {
 	border-top: 2px solid lightgray;
 }
+/** blog content **/
 main img {
 	max-width:800px;
 	max-height:540px;
@@ -41,6 +43,7 @@ main a {
 	font-weight:bold;
 }
 main button {
+	margin: 0 4px;
 	user-select: none;
 }
 .titleCard {
@@ -55,17 +58,13 @@ main button {
 	text-decoration: none;
 }
 canvas {
-	display:block;
 	width:auto;
 	height:auto;
 	max-width:640px;
 	max-height:480px;
-}
-.canvasWrapper {
-	vertical-align: top;
-	display:inline-block;
 	outline:1px solid lightgray;
 }
+/** alignment, subtitles and jump anchors **/
 .center {
 	text-align:center;
 }
@@ -79,6 +78,7 @@ canvas {
 	position: relative;
 	bottom:2rem;
 }
+/** low-light mode buttons **/
 .lights {
 	cursor:pointer;
 	margin-left:1.5rem;
@@ -113,6 +113,7 @@ canvas {
 }
 
 /** MEDIA QUERIES **/
+/** blog, images and canvas shrink according to screen size **/
 
 /** Sub-desktop **/
 @media only screen and (max-width: 1100px) and (min-width:800px)
@@ -144,7 +145,7 @@ canvas {
 @media only screen and (max-width: 600px)
 {
 	.blog {
-		width:100%;
+		width:100%; /** blog takes up whole screen - no gray borders **/
 		margin:0;
 		padding: 1rem;
 		padding-top: 3rem;

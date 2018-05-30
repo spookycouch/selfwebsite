@@ -273,7 +273,7 @@ footer a {
 }
 /** Small Phones **/
 @media only screen and (max-width: 320px) {
-	.specialCouch {
+	.specialCouch { /** couch logo on specific pages will be shrunk **/
 		height:14px;
 		width:14px;
 	}

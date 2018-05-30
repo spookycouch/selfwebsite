@@ -110,21 +110,23 @@ main a {
 		height:calc(100% - 100px); /** -100px to account for the footer **/
 	}
 }
-/** larger screens **/
+/** DESKTOP - larger screens **/
 @media only screen and (orientation:landscape) and (min-height:700px) 
 {
+	/** 2 by 2 grid **/
 	.foreground {
 		grid-template: 250px 250px / 400px 700px;
 	}
 }
-/** smaller screens **/
+/** DESKTOP - smaller screens **/
 @media only screen and (orientation:landscape) and (max-height:700px) and (min-height:500px)
 {
+	/** 2 by 2 grid **/
 	.foreground {
 		grid-template: 225px 225px / 350px 600px;
 	}
 }
-/** grid layout **/
+/** DESKTOP - grid layout **/
 @media only screen and (orientation:landscape) and (min-height:500px) and (min-width:1150px)
 {
 	.cb1 {
@@ -141,6 +143,7 @@ main a {
 /** SMALL DESKTOP/ TABLET **/
 @media only screen and (max-width:1150px) , (orientation:portrait)
 {
+	/** 2 by 2 grid **/
 	.foreground {
 		grid-template: 500px 225px / 350px 350px;
 	}
@@ -160,6 +163,7 @@ main a {
 	main {
 		font-size:0.875rem;
 	}
+	/** 3 by 1 grid **/
 	.foreground {
 		grid-template: 400px 250px 250px / 400px;
 	}
@@ -176,6 +180,7 @@ main a {
 /** SMALL PHONE **/
 @media only screen and (max-width:420px)
 {
+	/** 3 by 1 grid **/
 	.foreground {
 		grid-template: 120vw 200px 300px / 100%;
 	}
