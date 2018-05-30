@@ -170,7 +170,7 @@
 					</div>	<br>
 					<!-- Code example -->
 
-					<p>&ensp;Once this is done, its simply a case of creating an instance of the writer and running the write method with a String of your choice. Here's the result of one I did with the words "hello".</p>
+					<p>&ensp;Once this is done, it's simply a case of creating an instance of the writer and running the write method with a String of your choice. Here's the result of one I did with the words "hello".</p>
 
 					<div class="center">
 						<img src="./images/tutorial/saveData.png" alt="screenshot of write function">
@@ -225,7 +225,7 @@
 					</div>
 				</div>
 
-				<p>&ensp;With the power file readers and writers, you can now save values such as usernames, level information and even player position! This will all be easily accesible through the text file saved in the program's location, while information could be encrypted to prevent users from tampering with it.</p>
+				<p>&ensp;With the power file readers and writers, you can now save values such as usernames, level information and even player position! This will all be easily accessible through the text file saved in the program's location, while information could be encrypted to prevent users from tampering with it.</p>
 
 
 
@@ -294,7 +294,7 @@
 						<img class="lightBorder" src="./images/tutorial/button.png" alt="screenshot of GUI">
 					</div>
 
-					<p>&ensp;Now if you'll notice, the button takes up the entirity of the screen. This shows how swing containers work, as swing objects take up the full width of their parents when added without a layout.</p>
+					<p>&ensp;Now if you'll notice, the button takes up the entirety of the screen. This shows how swing containers work, as swing objects take up the full width of their parents when added without a layout.</p>
 
 				</div>
 
@@ -310,7 +310,7 @@
 					<p>&ensp;So we've made a screen with a button on it. That's <i>kinda</i> cool right? But hey, we really want our own graphics on the screen if we're making a game.
 					To do this, we'll need to <strong>override the paint method</strong> in our Jframe.
 				</p>
-					<p>While we're at it, lets turn our GUI into the JFrame itself by "extending" it.
+					<p>While we're at it, let's turn our GUI into the JFrame itself by "extending" it.
 					</p>
 					<span class="snippet">public class GUI extends JFrame;</span>
 					<p>Once overridden, we can use the Graphics2D library to draw a myriad of shapes to our heart's content</p>
@@ -370,7 +370,7 @@
 					Timer object included in the javax swing package. The timer comprises of an action listener that calls a method at regular set time intervals, meaning we could
 					simply tell the GUI to repaint its graphics every few dozen milliseconds or so.</p>
 					<div class="center"><span class="snippet">Timer timer = new Timer("few dozen milliseconds", new ActionListener());</span></div>
-					<p>&ensp;At this point you may be asking yourself, what's an ActionListener? The ActionListener is a class in the awt package that "listens" for a certain action to be performed, eg. the timer goes off. When the action is performed, a set of instructions can be carried out by the program in the actionPerformed method within the class.
+					<p>&ensp;At this point you may be asking yourself, what's an ActionListener? The ActionListener is a class in the awt package that "listens" for a certain action to be performed, e.g. the timer goes off. When the action is performed, a set of instructions can be carried out by the program in the actionPerformed method within the class.
 					To make it do what we want, we'll need to override the actionPerformed method of the class and set our own instructions.
 					</p>
 
@@ -568,7 +568,7 @@
 				<a class="jump" id="id5">anchor</a>
 				<h2>5.Enemies &amp; Hit Detection</h2>
 				<div class="post">
-					<p>&ensp;Finally, we'll be adding an enemy to our game, in the form of a gray box that moves downards towards the player. Whenever the enemy reaches the bottom of the screen, we'll reset its y-coordinates back to the top, and give it a random x-coordinate through <span class="snippet">Math.random()*640</span> to vary player reaction. A new check will be placed in the timer ActionListener called gameOver, which makes it that player and enemy coordinates can only be updated if the game is not over. The gameOver boolean itself will be triggered by collision detection between the two objects, as their coordinates are checked for intersection at every frame skip.
+					<p>&ensp;Finally, we'll be adding an enemy to our game, in the form of a gray box that moves downwards towards the player. Whenever the enemy reaches the bottom of the screen, we'll reset its y-coordinates back to the top, and give it a random x-coordinate through <span class="snippet">Math.random()*640</span> to vary player reaction. A new check will be placed in the timer ActionListener called gameOver, which makes it that player and enemy coordinates can only be updated if the game is not over. The gameOver boolean itself will be triggered by collision detection between the two objects, as their coordinates are checked for intersection at every frame skip.
 					</p>
 					
 					<!-- Code example -->
